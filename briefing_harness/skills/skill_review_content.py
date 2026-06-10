@@ -48,32 +48,36 @@ def get_ai_insight(news_list):
 [뉴스 목록]
 {context}
 """
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
-    payload = {"contents": [{"parts": [{"text": prompt}]}]}
+    local_url = "http://10.60.90.230:6789/v1/chat/completions"
+    local_payload = {
+        "model": "gemma-4-e4b-it",
+        "messages": [{"role": "user", "content": prompt}],
+        "temperature": 0.3
+    }
+    
+    gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={GEMINI_API_KEY}"
+    gemini_payload = {"contents": [{"parts": [{"text": prompt}]}]}
     
     try:
-        response = requests.post(url, json=payload, timeout=20, verify=False)
+        # [우선순위 1] 온프레미스 환경 (Gemma 4)을 최대한 활용하여 토큰 비용 절감
+        response = requests.post(local_url, json=local_payload, timeout=25, verify=False)
         result = response.json()
-        if 'candidates' in result:
-            raw_text = result['candidates'][0]['content']['parts'][0]['text']
+        if 'choices' in result and len(result['choices']) > 0:
+            raw_text = result['choices'][0]['message']['content']
             return format_ai_response(raw_text)
         else:
-            raise KeyError("candidates")
+            raise KeyError("choices")
     except Exception as e:
-        local_url = "http://10.60.90.230:6789/v1/chat/completions"
-        local_payload = {
-            "model": "gemma-4-e4b-it",
-            "messages": [{"role": "user", "content": prompt}],
-            "temperature": 0.3
-        }
+        print(f"⚠️ [Reviewer] 로컬 Gemma 모델 응답 실패, Gemini 3.5 Flash 엔진으로 폴백합니다. ({e})")
+        # [우선순위 2] 상용 클라우드 환경 (Gemini 3.5 Flash)으로 안전하게 대체 (Fallback)
         try:
-            response = requests.post(local_url, json=local_payload, timeout=25, verify=False)
+            response = requests.post(gemini_url, json=gemini_payload, timeout=20, verify=False)
             result = response.json()
-            if 'choices' in result and len(result['choices']) > 0:
-                raw_text = result['choices'][0]['message']['content']
+            if 'candidates' in result:
+                raw_text = result['candidates'][0]['content']['parts'][0]['text']
                 return format_ai_response(raw_text)
             else:
-                raise KeyError("choices")
+                raise KeyError("candidates")
         except Exception:
             fallback_text = (
                 "🏷️ [한줄 핵심]: 실시간 뉴스 동기화 및 2.0 업그레이드 완료\n\n"

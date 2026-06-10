@@ -34,6 +34,14 @@ def fetch_all_news():
                         
                     title = raw_title
 
+                    raw_desc = item.get('description', '')
+                    # HTML 태그 제거 및 양쪽 공백 정리
+                    clean_desc = re.sub(r'<[^>]+>', '', raw_desc).strip()
+                    
+                    # 기사 내용(description)이 텅 비어있다면 AI가 요약할 수 없으므로 가비지로 간주하고 스킵
+                    if not clean_desc:
+                        continue
+
                     category = "사회"
                     if "보안" in source['name'] or "보안" in title: category = "보안/사고"
                     elif "전자" in source['name'] or "ZD" in source['name'] or "IT" in title or "기술" in title: category = "IT/기술"
@@ -44,7 +52,7 @@ def fetch_all_news():
                         "title": title,
                         "source": source['name'].split(' ')[0],
                         "link": item.get('link', ''),
-                        "description": item.get('description', '').split('<')[0][:100],
+                        "description": clean_desc[:150], # 내용을 최대 150자까지 제공
                         "pubDate": item.get('pubDate', '')
                     })
         except Exception as e:

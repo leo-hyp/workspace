@@ -35,11 +35,14 @@ def fetch_all_news():
                     title = raw_title
 
                     raw_desc = item.get('description', '')
-                    # HTML 태그 제거 및 양쪽 공백 정리
-                    clean_desc = re.sub(r'<[^>]+>', '', raw_desc).strip()
+                    # HTML 태그 제거
+                    clean_desc = re.sub(r'<[^>]+>', '', raw_desc)
+                    # HTML 엔티티(&nbsp; 등) 디코딩 및 공백 정리
+                    import html
+                    clean_desc = html.unescape(clean_desc).strip()
                     
-                    # 기사 내용(description)이 텅 비어있다면 AI가 요약할 수 없으므로 가비지로 간주하고 스킵
-                    if not clean_desc:
+                    # 기사 내용(description)이 너무 짧거나(예: '데일리메디 데일리메디' 등 30자 미만) 텅 비어있다면 가비지로 간주하고 스킵
+                    if len(clean_desc) < 30:
                         continue
 
                     category = "사회"

@@ -53,6 +53,17 @@ def run_orchestrator():
     with open(os.path.join(workspace_dir, f"{today_str}_briefing.md"), "w", encoding="utf-8") as f:
         f.write(briefing_html)
 
+    # 옵시디언 데이터베이스 동기화
+    obsidian_dir = r"C:\Users\ismadmin\Documents\ObsidianVault\Medi-IT-Research"
+    os.makedirs(obsidian_dir, exist_ok=True)
+    obsidian_filename = f"Medi-IT-Research-Briefing_{datetime.now().strftime('%Y-%m-%d')}.md"
+    try:
+        with open(os.path.join(obsidian_dir, obsidian_filename), "w", encoding="utf-8") as f:
+            f.write(briefing_html)
+        print(f"✅ [Reviewer] 옵시디언 볼트 동기화 완료 ({obsidian_filename})")
+    except Exception as e:
+        print(f"⚠️ [Reviewer] 옵시디언 저장 실패: {e}")
+
     # [Agent 3] Telegram Publisher
     print("🤖 [Publisher] 텔레그램 메신저 전송 시작...")
     success, msg = skill_publish_telegram.send_telegram(briefing_html)

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📻 Medi-IT Retro-Cyber AI Radio Station 2.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+</head>
+<body>
+    <div class="glow-container"></div>
+    
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="pulse-red">🔴 LIVE</span>
+                <h1>MEDI-IT <span>AI RADIO STATION 2.0</span></h1>
+            </div>
+            <div class="server-status">
+                <span class="status-dot green"></span>
+                <span>방송 서버 온라인 (Port: 9120)</span>
+            </div>
+        </header>
+
+        <!-- Main Layout -->
+        <main class="main-content">
+            <!-- Left Side: Retro Cyber Cassette Deck / Radio Player -->
+            <section class="player-section">
+                <div class="retro-deck">
+                    <div class="deck-header">
+                        <div class="brand">ANTIGRAVITY STEREO</div>
+                        <div class="model-num">MODEL AG-2026 <button class="maximize-btn" data-target="player-section" title="패널 최대화/복원">🗖</button></div>
+                    </div>
+                    
+                    <!-- Cyberpunk Dynamic Holographic Visualizer Panel -->
+                    <div class="cassette-window">
+                        <div class="cyber-visualizer-panel">
+                            <canvas id="visualizer-canvas"></canvas>
+                            <div class="hologram-glow"></div>
+                            <div class="hologram-label">📻 LIVE HOLOGRAPHIC WAVE TRANSMITTING</div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Equalizer & VU Meter -->
+                    <div class="vu-meter-container">
+                        <div class="vu-label">SPECTRUM ANALYZER</div>
+                        <div class="vu-bars" id="vu-bars">
+                            <!-- Visualizer bars created dynamically -->
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+
+                    <!-- Counter and Status Screen -->
+                    <div class="status-screen">
+                        <div class="digital-counter" id="digital-counter">00:00</div>
+                        <div class="screen-message" id="screen-message">📻 방송 대기 중...</div>
+                    </div>
+
+                    <!-- Physical Deck Controls -->
+                    <div class="deck-controls">
+                        <button id="btn-build" class="deck-btn build" title="새로운 방송 주파수 합성">
+                            <span class="icon">🎙️</span>
+                            <span class="lbl">방송 합성</span>
+                        </button>
+                        <button id="btn-play" class="deck-btn play" title="재생">
+                            <span class="icon">▶</span>
+                            <span class="lbl">PLAY</span>
+                        </button>
+                        <button id="btn-pause" class="deck-btn pause" title="일시 정지">
+                            <span class="icon">‖</span>
+                            <span class="lbl">PAUSE</span>
+                        </button>
+                        <button id="btn-stop" class="deck-btn stop" title="정지">
+                            <span class="icon">■</span>
+                            <span class="lbl">STOP</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vertical Resizer Divider -->
+            <div class="v-divider" id="v-divider"></div>
+
+            <!-- Right Side: Interactive Transmitter & Control Center -->
+            <section class="control-section">
+                <div class="control-panel">
+                    <div class="panel-title-row">
+                        <h2>📡 송신 주파수 및 AI DJ 설정</h2>
+                        <button class="maximize-btn" data-target="control-panel" title="패널 최대화/복원">🗖</button>
+                    </div>
+
+                    <!-- URL Link Parser & Keyword Search Row -->
+                    <div class="input-enrich-group">
+                        <div class="enrich-box">
+                            <label for="url-input">🔗 외부 기사 링크 연동 (URL Parser)</label>
+                            <div class="enrich-row">
+                                <input type="url" id="url-input" placeholder="분석할 기사 링크를 넣어주세요...">
+                                <button id="btn-fetch-url" class="enrich-btn">링크 주입</button>
+                            </div>
+                        </div>
+                        <div class="enrich-box">
+                            <label for="search-input">🔍 AI 키워드 뉴스 검색 (Search Feed)</label>
+                            <div class="enrich-row">
+                                <input type="text" id="search-input" placeholder="검색어를 입력하세요... (예: 양자암호, 백신)">
+                                <button id="btn-search-topic" class="enrich-btn search">이슈 수집</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="radio-topic">📣 방송 대화 주제 및 연출 지시 (상세할수록 풍성해집니다!)</label>
+                        <textarea id="radio-topic" rows="4" placeholder="DJs가 다루어줬으면 하는 대화 주제, 드립 요구나 구체적인 시나리오 상황을 자유롭게 풍성하게 작성하세요...">최신 테크 트렌드와 보안 위협, 그리고 인공지능이 인간의 일자리를 대체하는 현상에 대해 레오는 매우 깐깐하고 진지하게 분석하고, 안티는 이에 대꾸하며 유쾌하고 위트 넘치게 코멘트해주세요.</textarea>
+                    </div>
+
+                    <div class="presets-container">
+                        <span class="preset-label">💡 추천 테마 프리셋:</span>
+                        <div class="preset-chips">
+                            <button class="preset-chip" data-topic="인공지능 대공황과 인간의 생존 전략: AI가 모든 지식 업무를 대체할 때 벌어지는 가치관의 대란과 레오의 깐깐한 경고, 안티의 낙천적인 조언">🤖 AI 대공황</button>
+                            <button class="preset-chip" data-topic="사이버 보안 2026 트렌드: 클라우드 타겟 랜섬웨어 공격 방식과 다중 인증(MFA) 우회 기법에 대한 레오의 심도 있는 인프라 분석 및 안티의 철저한 보안 습관 전파">🛡️ 2026 보안 트렌드</button>
+                            <button class="preset-chip" data-topic="메타버스의 몰락과 공간 컴퓨팅의 귀환: 애플 비전 프로 2세대 출시 루머와 공간 컴퓨터가 바꿀 일상생활, 그리고 레오의 회의론과 안티의 가상 피팅룸 드립">🕶️ 공간 컴퓨팅</button>
+                            <button class="preset-chip" data-topic="주말 아침, 바쁜 현대인을 위한 맛있는 로컬 원두 커피 투어 코스 추천 및 바리스타 레오의 깐깐한 드립커피 추출 비법 폭로, 안티의 인스턴트 커피 애호 드립">☕ 원두커피 & 라이프</button>
+                        </div>
+                    </div>
+
+                    <div class="control-row">
+                        <div class="form-group half">
+                            <label for="radio-tone">🎨 방송 스타일 & 톤앤매너</label>
+                            <select id="radio-tone">
+                                <option value="default">🗣️ 유쾌한 만담 (기본)</option>
+                                <option value="comedy">🔥 앙큼폭발 코미디</option>
+                                <option value="serious">🧠 냉철하고 심도 있는 보안분석</option>
+                                <option value="tech">📡 뼛속까지 엔지니어 테크 토크</option>
+                            </select>
+                        </div>
+                        <div class="form-group half">
+                            <label for="radio-length">⏱️ 방송 목표 분량</label>
+                            <select id="radio-length">
+                                <option value="medium">⏱️ 보통 분량 (약 2분)</option>
+                                <option value="short">⚡ 짧고 굵게 (약 1분)</option>
+                                <option value="long">📜 풍성하고 길게 (약 3분 이상)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="news-feed-header" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; align-items: center;">
+                            <label style="margin-bottom: 0;">📰 실시간 뉴스 데이터 통합 피드 (선택 사항)</label>
+                            <label style="margin-bottom: 0; cursor: pointer; display: flex; align-items: center; gap: 5px; color: var(--text-secondary); font-size: 0.9rem;">
+                                <input type="checkbox" id="news-select-all" checked> 전체 선택
+                            </label>
+                        </div>
+                        <div class="news-feed-scroller" id="news-feed-list">
+                            <!-- Dynamically loaded custom mock news that user can select -->
+                            <div class="news-feed-item selected" data-title="네이버 클라우드, 보안 패치 발표" data-desc="전사 시스템에 강력한 암호화 알고리즘이 적용됩니다.">
+                                <input type="checkbox" checked>
+                                <div class="feed-text">
+                                    <strong>네이버 클라우드, 보안 패치 발표</strong>
+                                    <span>전사 시스템에 강력한 암호화 알고리즘이 적용됩니다.</span>
+                                </div>
+                            </div>
+                            <div class="news-feed-item selected" data-title="Gemini 3.5 고성능 추론 엔진 전격 릴리즈" data-desc="오디오 합성 속도와 대본 창작 속도가 1.5초 미만으로 단축됩니다.">
+                                <input type="checkbox" checked>
+                                <div class="feed-text">
+                                    <strong>Gemini 3.5 고성능 추론 엔진 전격 릴리즈</strong>
+                                    <span>오디오 합성 속도와 대본 창작 속도가 1.5초 미만으로 단축됩니다.</span>
+                                </div>
+                            </div>
+                            <div class="news-feed-item" data-title="전국 병원 랜섬웨어 감염 주의보 발령" data-desc="의료 보안 전문가들이 정기적인 오프라인 백업을 적극 권고하고 나섰습니다.">
+                                <input type="checkbox">
+                                <div class="feed-text">
+                                    <strong>전국 병원 랜섬웨어 감염 주의보 발령</strong>
+                                    <span>의료 보안 전문가들이 정기적인 오프라인 백업을 적극 권고하고 나섰습니다.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dj-profile-cards">
+                        <div class="dj-card male">
+                            <div class="avatar">👨‍💼</div>
+                            <div class="info">
+                                <span class="role">DJ LEO (레오)</span>
+                                <span class="voice-id">InJoonNeural (남)</span>
+                                <span class="desc">지적이고 깐깐한 IT 평론가</span>
+                            </div>
+                        </div>
+                        <div class="dj-card female">
+                            <div class="avatar">🤖</div>
+                            <div class="info">
+                                <span class="role">DJ 안티그라비티</span>
+                                <span class="voice-id">SunHiNeural (여)</span>
+                                <span class="desc">귀엽고 앙큼한 AI 조수</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Horizontal Resizer Divider -->
+                <div class="h-divider" id="h-divider"></div>
+
+                <div class="script-panel">
+                    <div class="panel-title-row">
+                        <h2>📝 실시간 방송 송출 대본 (Live Transcript)</h2>
+                        <button class="maximize-btn" data-target="script-panel" title="패널 최대화/복원">🗖</button>
+                    </div>
+                    <div class="script-box" id="script-box">
+                        <p class="placeholder-text">방송을 합성하면 여기에 LEO와 안티의 실시간 만담 대본이 표시됩니다.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Hidden Audio Element -->
+        <audio id="audio-player" src="./ai_radio_broadcast.mp3" crossorigin="anonymous"></audio>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Created by <strong>LEOHYP</strong> & <strong>Antigravity AI</strong> © 2026 | Vintage Cyberpunk AIRadio Station 2.0</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

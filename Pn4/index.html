@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레오의 여행 따라잡기 (Serverless)</title>
+    <meta name="description" content="레오(LEOHYP)님의 지능형 개인 여행 및 맛집 계획 관리, 라이프 다이어리 저장 아카이브 대시보드 (서버리스)">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Marked.js for Client-Side Markdown Parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- html2pdf.js & html2canvas for Client-Side PDF Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <!-- Leaflet.js for Serverless Interactive Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container" class="app-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside id="app-sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo-icon"><i class="fa-solid fa-compass"></i></div>
+                <div class="logo-text">Pn4 Life</div>
+            </div>
+            
+            <!-- Connection Status Badge -->
+            <div class="connection-status-panel">
+                <div class="status-badge disconnected" id="vault-status-badge">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Obsidian 연결 필요</span>
+                </div>
+                <button id="btn-connect-vault" class="connect-btn" onclick="connectObsidianVault()">
+                    <i class="fa-solid fa-folder-open"></i> 보관소 폴더 선택
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <button id="nav-btn-dashboard" class="nav-item active" onclick="switchTab('dashboard')">
+                    <i class="fa-solid fa-chart-pie"></i> 대시보드
+                </button>
+                <button id="nav-btn-planner" class="nav-item" onclick="switchTab('planner')">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> AI 여행 플래너
+                </button>
+                <button id="nav-btn-logger" class="nav-item" onclick="switchTab('logger')">
+                    <i class="fa-solid fa-pen-to-square"></i> 다이어리 기록
+                </button>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="settings-trigger-btn" onclick="openSettingsModal()">
+                    <i class="fa-solid fa-gear"></i> Gemini 설정
+                </button>
+                <span class="user-badge"><i class="fa-solid fa-user-shield"></i> LEOHYP</span>
+                <span class="agent-tag">Partner: Antigravity</span>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main id="app-main" class="main-content">
+            <header class="main-header">
+                <h1 id="main-heading">레오의 여행 따라잡기 (Serverless)</h1>
+                
+                <div id="stats-summary" class="stats-bar">
+                    <div class="stat-card">
+                        <span class="stat-label">총 기록</span>
+                        <span id="stat-total-count" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">🗺️ 여행</span>
+                        <span id="stat-travel-count" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">🍕 맛집</span>
+                        <span id="stat-gourmet-count" class="stat-value">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">💸 총 지출</span>
+                        <span id="stat-total-expenses" class="stat-value">0원</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Tab: Dashboard -->
+            <section id="tab-dashboard" class="tab-content active">
+                <div class="filter-controls">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="search-input" placeholder="여행지, 맛집 상호명, 메모 키워드 검색..." oninput="filterLogs()">
+                    </div>
+                    <div class="filter-buttons">
+                        <button id="filter-btn-all" class="filter-btn active" onclick="filterCategory('all')">전체</button>
+                        <button id="filter-btn-travel" class="filter-btn" onclick="filterCategory('Travel')"><i class="fa-solid fa-plane"></i> 여행</button>
+                        <button id="filter-btn-gourmet" class="filter-btn" onclick="filterCategory('Gourmet')"><i class="fa-solid fa-utensils"></i> 맛집</button>
+                    </div>
+                </div>
+
+                <div id="logs-container" class="logs-grid">
+                    <!-- Cards will be populated dynamically -->
+                    <div class="empty-state">
+                        <i class="fa-solid fa-folder-closed" style="font-size: 2.5rem; margin-bottom: 0.5rem;"></i>
+                        <p>먼저 왼쪽 사이드바에서 [보관소 폴더 선택] 버튼을 눌러 Obsidian 폴더와 연동해 주세요.</p>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">또는, 아래 데모 버튼을 클릭하여 연동 없이 즉시 앱의 고급 기능들을 테스트해볼 수 있습니다.</p>
+                        <button type="button" class="connect-btn" onclick="loadDemoData()" style="margin-top: 1rem; border-color: var(--accent-amber); color: var(--accent-amber); background: none;">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> 데모 데이터로 즉시 체험하기
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tab: AI Planner -->
+            <section id="tab-planner" class="tab-content">
+                <div class="form-container glass-panel">
+                    <h2 class="section-title"><i class="fa-solid fa-wand-magic-sparkles"></i> AI 프리미엄 여행/맛집 플래너</h2>
+                    <p class="section-desc">가고 싶은 목적지와 일정, 테마를 입력하면 Gemini가 맞춤형 코스를 구성하며, Obsidian 보관소에 자동 저장됩니다.</p>
+
+                    <!-- Planner Sub-Tab Navigation -->
+                    <div class="planner-sub-tabs">
+                        <button class="planner-sub-tab active" data-subtab="setup" onclick="switchPlannerSubTab('setup')">
+                            <i class="fa-solid fa-sliders"></i> ① 여행 설정
+                        </button>
+                        <button class="planner-sub-tab" data-subtab="wizard" onclick="switchPlannerSubTab('wizard')">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> ② 코스 조율
+                        </button>
+                        <button class="planner-sub-tab" data-subtab="result" onclick="switchPlannerSubTab('result')">
+                            <i class="fa-solid fa-file-lines"></i> ③ 최종 계획서
+                        </button>
+                    </div>
+
+                    <!-- ===== Sub-Tab 1: 여행 설정 ===== -->
+                    <div id="planner-sub-setup" class="planner-sub-content active">
+                        <form id="ai-planner-form" onsubmit="event.preventDefault(); startPlannerWizard();">
+                            <div class="form-group">
+                                <label for="planner-destination">📍 목적지</label>
+                                <input type="text" id="planner-destination" placeholder="예: 강릉, 제주도, 경주 맛집 투어" required>
+                            </div>
+
+                            <!-- Date Range Picker + Duration Badge -->
+                            <div class="date-range-row" style="margin-bottom: 1.25rem;">
+                                <div class="form-group">
+                                    <label for="planner-start-date">📅 출발일</label>
+                                    <input type="date" id="planner-start-date" required onchange="updateDurationBadge()">
+                                </div>
+                                <span class="date-separator">→</span>
+                                <div class="form-group">
+                                    <label for="planner-end-date">📅 귀환일</label>
+                                    <input type="date" id="planner-end-date" required onchange="updateDurationBadge()">
+                                </div>
+                                <span id="duration-badge" class="duration-auto-badge">1박 2일</span>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="planner-party-size">👥 여행 인원수</label>
+                                    <select id="planner-party-size">
+                                        <option value="1">1명 (혼자 여행)</option>
+                                        <option value="2" selected>2명</option>
+                                        <option value="3">3명</option>
+                                        <option value="4">4명</option>
+                                        <option value="5">5명 이상</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="planner-theme">✨ 여행 테마</label>
+                                    <input type="text" id="planner-theme" placeholder="예: 가족 온천 휴식, 연인과 맛집 투어" value="힐링 및 맛집 탐방" required>
+                                </div>
+                            </div>
+
+                            <!-- Collapsible Detailed Travel Options -->
+                            <div class="detailed-options-container" style="margin-top: 0.5rem; margin-bottom: 1.5rem;">
+                                <button type="button" class="icon-btn" onclick="toggleDetailedOptions()" style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.25rem; border-radius: 12px; font-weight: 600; background-color: rgba(0,0,0,0.02);">
+                                    <span><i class="fa-solid fa-sliders" style="color: var(--accent-emerald); margin-right: 0.5rem;"></i> ⚙️ 추가 상세 조건 설정 (선택사항)</span>
+                                    <i id="detailed-options-arrow" class="fa-solid fa-chevron-down" style="transition: var(--transition-smooth);"></i>
+                                </button>
+
+                                <div id="detailed-options-panel" class="hidden" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1); background-color: rgba(0,0,0,0.015); border-radius: 12px; margin-top: 0.5rem; border: 1px solid var(--border-color); padding: 0;">
+                                    <div style="padding: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem;">
+                                        <div class="form-row">
+                                            <div class="form-group" style="margin-bottom: 0;">
+                                                <label for="planner-transport">🚗 기본 이동수단</label>
+                                                <select id="planner-transport">
+                                                    <option value="자가용">🚗 자가용 (주차 최적화)</option>
+                                                    <option value="대중교통 및 도보">🚶 대중교통 및 도보</option>
+                                                    <option value="택시">🚕 택시 위주 이동</option>
+                                                    <option value="상관없음" selected> 상관없음</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group" style="margin-bottom: 0;">
+                                                <label for="planner-stay-type">🏨 선호 숙소 유형</label>
+                                                <select id="planner-stay-type">
+                                                    <option value="5성급 프리미엄 호텔">🏨 5성급 프리미엄 호텔 (호캉스)</option>
+                                                    <option value="감성 한옥 스테이">🏡 감성 한옥 스테이</option>
+                                                    <option value="가성비 게스트하우스">🛖 가성비 게스트하우스</option>
+                                                    <option value="오션뷰 감성 펜션">🌊 오션뷰 감성 펜션 / 풀빌라</option>
+                                                    <option value="상관없음" selected> 상관없음</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group" style="margin-bottom: 0;">
+                                            <label for="planner-custom-reqs">✍️ 기타 특별 요청사항</label>
+                                            <input type="text" id="planner-custom-reqs" placeholder="예: 부모님 모시고 가요, 조용한 오션뷰 카페 포함 등">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" id="planner-submit-btn" class="submit-btn">
+                                <i class="fa-solid fa-paper-plane"></i> 일정 설계 시작하기
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- ===== Sub-Tab 2: 코스 조율 마법사 ===== -->
+                    <div id="planner-sub-wizard" class="planner-sub-content">
+                        <div id="planner-wizard-area" class="planner-wizard" style="padding-top: 0;">
+                            <!-- Stepper -->
+                            <div class="stepper-container" style="margin-bottom: 2rem;">
+                                <div class="stepper-header" style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-weight: 600;">
+                                    <span id="wizard-step-title" class="step-title" style="color: var(--accent-blue); font-size: 1.1rem;">1일차 점심 식사</span>
+                                    <span id="wizard-step-progress" class="step-progress" style="color: var(--text-secondary);">1 / 5</span>
+                                </div>
+                                <div class="stepper-bar" style="background-color: rgba(0,0,0,0.05); height: 8px; border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color);">
+                                    <div id="wizard-progress-bar" class="stepper-progress-fill" style="width: 20%; background: linear-gradient(90deg, var(--accent-blue), var(--accent-emerald)); height: 100%; transition: var(--transition-smooth);"></div>
+                                </div>
+                            </div>
+
+                            <!-- Two Column Layout -->
+                            <div class="wizard-two-column-layout" style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; align-items: stretch;">
+                                <!-- Left: Settings & Recommendations -->
+                                <div class="wizard-left-col" style="flex: 1.2; display: flex; flex-direction: column; gap: 1.25rem;">
+                                    <!-- Timeline Overview -->
+                                    <div class="timeline-overview" style="background-color: rgba(0,0,0,0.02); border: 1px solid var(--border-color); padding: 1rem; border-radius: var(--radius-md);">
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem;">
+                                            <h4 style="font-size: 0.95rem; font-weight: 700; margin: 0;"><i class="fa-solid fa-list-check"></i> 📋 일정 초안 흐름 (드래그 순서 조정)</h4>
+                                            <button type="button" class="icon-btn" onclick="optimizeWizardRoute()" style="font-size: 0.78rem; padding: 0.3rem 0.6rem; border-color: var(--accent-blue); color: var(--accent-blue);">
+                                                <i class="fa-solid fa-route"></i> 🗺️ 동선 최적화
+                                            </button>
+                                        </div>
+                                        <div id="wizard-timeline-container" style="display: flex; flex-direction: column; gap: 0.4rem; max-height: 200px; overflow-y: auto; padding-right: 0.4rem;"></div>
+                                    </div>
+
+                                    <!-- Local History Hint -->
+                                    <div id="local-history-hint" class="local-hint-card hidden" style="background-color: var(--accent-blue-light); border: 1px solid rgba(56, 189, 248, 0.15); padding: 1rem; border-radius: var(--radius-md); display: flex; flex-direction: column; gap: 0.4rem;">
+                                        <div class="hint-header" style="font-weight: 700; color: var(--accent-blue); font-size: 0.9rem;">
+                                            <i class="fa-solid fa-lightbulb"></i> 💡 과거 Obsidian 기록 발견
+                                        </div>
+                                        <div id="local-history-hint-content" class="hint-body" style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.5;"></div>
+                                    </div>
+
+                                    <!-- Recommendations -->
+                                    <div class="recommendation-section">
+                                        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.2rem;"><i class="fa-solid fa-magnifying-glass"></i> 실시간 블로그 & 유튜브 추천 목록</h4>
+                                        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.85rem;">Gemini 구글 실시간 검색 연동 추천입니다. 카드를 클릭하세요.</p>
+
+                                        <!-- Preference Chips -->
+                                        <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem;">
+                                            <span style="font-size: 0.82rem; color: var(--text-secondary); align-self: center; font-weight: 600; margin-right: 0.2rem;"><i class="fa-solid fa-filter"></i> 스타일:</span>
+                                            <button type="button" class="pref-chip active" onclick="setPreferenceFilter('', this)">🌱 기본</button>
+                                            <button type="button" class="pref-chip" onclick="setPreferenceFilter('가성비가 좋은', this)">💰 가성비</button>
+                                            <button type="button" class="pref-chip" onclick="setPreferenceFilter('전망이 좋은 오션뷰', this)">🌊 전망</button>
+                                            <button type="button" class="pref-chip" onclick="setPreferenceFilter('인스타그램/유튜브 핫플레이스', this)">🔥 핫플</button>
+                                            <button type="button" class="pref-chip" onclick="setPreferenceFilter('평점이 높고 후기가 많은', this)">⭐ 평점</button>
+                                            <button type="button" class="pref-chip" onclick="setPreferenceFilter('조용하고 아늑한 힐링', this)">🌿 힐링</button>
+                                        </div>
+
+                                        <div id="recommend-cards-container" class="recommend-cards-grid"></div>
+                                    </div>
+                                </div>
+
+                                <!-- Right: Map -->
+                                <div class="wizard-right-col" style="flex: 1; display: flex; flex-direction: column; min-height: 380px; background-color: rgba(0,0,0,0.02); border: 1px solid var(--border-color); padding: 1rem; border-radius: var(--radius-md);">
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.6rem;"><i class="fa-solid fa-map-location-dot"></i> 🗺️ 실시간 동선 & 추천지 지도</h4>
+                                    <div id="wizard-map-container" style="flex: 1; border: 1px solid var(--border-color); border-radius: var(--radius-sm); overflow: hidden; position: relative;">
+                                        <div id="wizard-map" style="width: 100%; height: 100%; min-height: 360px; z-index: 1;"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Step Control -->
+                            <div class="wizard-control-row" style="display: flex; gap: 1rem; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1.25rem;">
+                                <div class="form-group" style="flex-grow: 1; margin-bottom: 0; display: flex; flex-direction: column; gap: 0.4rem;">
+                                    <label for="wizard-custom-input" style="font-size: 0.82rem;">✍️ 선택지 직접 입력</label>
+                                    <input type="text" id="wizard-custom-input" placeholder="예: 경주 황남밀면집에서 밀면 식사">
+                                </div>
+                                <button id="btn-wizard-next" class="submit-btn" onclick="submitWizardStep()" style="margin-top: 1.25rem; width: auto; padding: 0.75rem 1.75rem; white-space: nowrap;">
+                                    다음 단계로 <i class="fa-solid fa-arrow-right"></i>
+                                </button>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; border-top: 1px solid rgba(0,0,0,0.04); padding-top: 0.85rem;">
+                                <button class="icon-btn" onclick="refreshStepRecommendations()" style="padding: 0.45rem 0.85rem;">
+                                    <i class="fa-solid fa-arrows-rotate"></i> 다른 목록 검색
+                                </button>
+                                <button class="icon-btn" onclick="cancelPlannerWizard()" style="color: var(--accent-rose); border-color: rgba(239, 68, 68, 0.15); padding: 0.45rem 0.85rem;">
+                                    계획 수립 취소
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Empty state when wizard hasn't started -->
+                        <div id="wizard-empty-state" style="text-align: center; padding: 3rem 0; color: var(--text-muted);">
+                            <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent-blue); opacity: 0.4;"></i>
+                            <p style="font-size: 1rem;">① 여행 설정 탭에서 일정 설계를 시작하면<br>이곳에서 단계별 코스 조율이 진행됩니다.</p>
+                        </div>
+                    </div>
+
+                    <!-- ===== Sub-Tab 3: 최종 계획서 ===== -->
+                    <div id="planner-sub-result" class="planner-sub-content">
+                        <!-- Route Optimization Banner -->
+                        <div id="route-optimize-banner" class="optimize-banner hidden">
+                            <div class="optimize-banner-content">
+                                <i class="fa-solid fa-route"></i>
+                                <div>
+                                    <strong>🗺️ 동선 최적화 권유</strong><br>
+                                    <span id="route-optimize-msg" style="font-size: 0.85rem;">현재 이동 경로를 재배치하면 이동 거리를 절약할 수 있습니다.</span>
+                                </div>
+                            </div>
+                            <div class="optimize-banner-actions">
+                                <button onclick="applyRouteOptimization()">✅ 최적화 적용</button>
+                                <button onclick="dismissRouteOptimization()">현재 순서 유지</button>
+                            </div>
+                        </div>
+
+                        <!-- Result Box -->
+                        <div id="planner-result-box" class="planner-result hidden">
+                            <div class="result-header">
+                                <h3>🗺️ 생성된 AI 코스 계획표</h3>
+                                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <span id="current-plan-filename-badge" class="filepath-text" style="color: var(--accent-blue); font-weight: 600; margin-right: 0.4rem;"></span>
+                                    <button id="btn-download-pdf" class="submit-btn" onclick="generateBrochurePDF()" style="margin-top: 0; padding: 0.45rem 1rem; font-size: 0.82rem; background: linear-gradient(135deg, var(--accent-emerald), var(--accent-emerald-hover)); border: none; height: auto;">
+                                        <i class="fa-solid fa-file-pdf"></i> ✨ PDF 브로셔 다운로드
+                                    </button>
+                                    <button id="copy-plan-btn" class="icon-btn" onclick="copyPlanToClipboard()"><i class="fa-regular fa-copy"></i> 복사</button>
+                                </div>
+                            </div>
+
+                            <div class="success-alert">
+                                <i class="fa-solid fa-circle-check"></i> 본 계획표는 로컬 Obsidian 폴더에 자동 동기화되어 저장 및 관리되고 있습니다.
+                            </div>
+
+                            <!-- Mode Switcher -->
+                            <div class="editor-mode-toggle">
+                                <button id="btn-planner-view-mode" class="mode-toggle-btn active" onclick="setPlannerEditorMode('view')">
+                                    <i class="fa-solid fa-eye"></i> 👀 보기 모드
+                                </button>
+                                <button id="btn-planner-edit-mode" class="mode-toggle-btn" onclick="setPlannerEditorMode('edit')">
+                                    <i class="fa-solid fa-pen-to-square"></i> ✍️ 직접 수정 모드
+                                </button>
+                            </div>
+
+                            <!-- Split: Preview & Map -->
+                            <div class="planner-split-container" style="display: flex; gap: 1.5rem; height: 480px; margin-bottom: 1.5rem; align-items: stretch;">
+                                <div id="planner-result-content" class="markdown-preview" style="flex: 1.2; height: 100%; max-height: 100%; overflow-y: auto;"></div>
+                                <div id="planner-map-container" style="flex: 1; height: 100%; border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden; position: relative;">
+                                    <div id="planner-map" style="width: 100%; height: 100%; z-index: 1;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Utilities: Checklist & Budget -->
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 1.5rem;">
+                                <!-- Checklist -->
+                                <div class="utility-card" style="background: rgba(255,255,255,0.55); border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-lg);">
+                                    <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-suitcase" style="color: var(--accent-blue);"></i> 🧳 여행 준비물 체크리스트</h4>
+                                    <div style="display: flex; gap: 0.4rem; margin-bottom: 0.85rem;">
+                                        <input type="text" id="checklist-new-item" placeholder="새 준비물 입력..." style="padding: 0.45rem 0.75rem; font-size: 0.85rem; flex-grow: 1;">
+                                        <button type="button" class="connect-btn" onclick="addChecklistItemDirect()" style="padding: 0 0.85rem; border-radius: 8px; font-size: 0.82rem; background-color: var(--accent-blue); color: #fff; border: none; white-space: nowrap;"><i class="fa-solid fa-plus"></i> 추가</button>
+                                    </div>
+                                    <div id="checklist-items-container" style="display: flex; flex-direction: column; gap: 0.4rem; max-height: 230px; overflow-y: auto; padding-right: 0.4rem;"></div>
+                                </div>
+
+                                <!-- Budget -->
+                                <div class="utility-card" style="background: rgba(255,255,255,0.55); border: 1px solid var(--border-color); padding: 1.75rem; border-radius: var(--radius-lg);">
+                                    <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.85rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-wallet" style="color: var(--accent-amber);"></i> 💸 여행 가계부</h4>
+                                    <div id="budget-summary-panel" style="display: flex; flex-direction: column; gap: 0.85rem;">
+                                        <div style="display: flex; justify-content: space-between; font-size: 0.95rem; font-weight: 600; border-bottom: 1px solid var(--border-color); padding-bottom: 0.4rem;">
+                                            <span>총 예상 비용 <span id="budget-party-label" style="font-size: 0.78rem; color: var(--text-muted);">(2명 기준)</span></span>
+                                            <span id="budget-total-cost" style="color: var(--accent-emerald);">0원</span>
+                                        </div>
+                                        <div id="budget-per-person-row" class="budget-per-person" style="display: flex; justify-content: space-between;">
+                                            <span>1인당 비용</span>
+                                            <span id="budget-per-person-cost">0원</span>
+                                        </div>
+                                        <div style="background-color: rgba(0,0,0,0.02); border: 1px solid var(--border-color); padding: 1rem; border-radius: var(--radius-sm);">
+                                            <div style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.6rem; font-weight: 600;">카테고리별 예상 지출 비중</div>
+                                            <div id="budget-categories-bars" style="display: flex; flex-direction: column; gap: 0.65rem;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Editor Panel -->
+                            <div id="planner-editor-container" class="planner-editor-wrap hidden">
+                                <textarea id="planner-editor-textarea" rows="20" placeholder="계획표 마크다운 원본 수정..."></textarea>
+                                <button id="btn-save-manual-edit" class="submit-btn" onclick="saveManualPlanEdit()" style="margin-top: 0.85rem; background: linear-gradient(135deg, var(--accent-blue), hsl(225, 65%, 45%));">
+                                    <i class="fa-solid fa-floppy-disk"></i> 직접 수정 사항 저장
+                                </button>
+                            </div>
+
+                            <!-- AI Refiner -->
+                            <div class="ai-refine-panel">
+                                <h4><i class="fa-solid fa-robot"></i> 🤖 AI에게 일정 보완/수정 요청</h4>
+                                <p class="refine-desc">기존 일정 흐름 유지하면서 특정 항목만 변경하고 싶을 때 자연어로 요청하세요.</p>
+                                <div class="refine-input-group">
+                                    <textarea id="planner-refine-input" rows="3" placeholder="예: 둘째 날 오전을 1시간 늦춰서 출발하게 수정하고, 오션뷰 카페 코스 추가해줘"></textarea>
+                                    <button id="planner-refine-submit-btn" class="submit-btn refine-btn" onclick="refineAIPlan()">
+                                        <i class="fa-solid fa-arrows-rotate"></i> 피드백 반영하여 업그레이드
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Empty state when no result yet -->
+                        <div id="result-empty-state" style="text-align: center; padding: 3rem 0; color: var(--text-muted);">
+                            <i class="fa-solid fa-file-lines" style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent-emerald); opacity: 0.4;"></i>
+                            <p style="font-size: 1rem;">② 코스 조율이 완료되면<br>이곳에 최종 여행 계획서가 생성됩니다.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Tab: Logger -->
+            <section id="tab-logger" class="tab-content">
+                <div class="form-container glass-panel">
+                    <h2 class="section-title"><i class="fa-solid fa-pen-to-square"></i> 다이어리 기록 작성</h2>
+                    <p class="section-desc">다녀온 여행이나 맛집 방문 기록을 작성하여 나만의 아카이브에 영구 저장합니다. (Obsidian Markdown 파일 자동 생성)</p>
+                    
+                    <form id="logger-form" onsubmit="event.preventDefault(); saveDiaryLog();">
+                        <div class="form-group">
+                            <label for="log-title">✍️ 제목 (이름)</label>
+                            <input type="text" id="log-title" placeholder="예: 강릉 중앙시장 먹거리, 경주 한옥펜션 힐링" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="log-category">📂 분류</label>
+                                <select id="log-category" required>
+                                    <option value="Gourmet">🍕 맛집 탐방</option>
+                                    <option value="Travel">✈️ 여행 기록</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="log-date">📅 방문 날짜</label>
+                                <input type="date" id="log-date" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="log-rating">⭐ 만족도 평점</label>
+                                <div class="rating-stars-container">
+                                    <select id="log-rating" required>
+                                        <option value="5">⭐⭐⭐⭐⭐ (아주 만족)</option>
+                                        <option value="4">⭐⭐⭐⭐ (만족)</option>
+                                        <option value="3">⭐⭐⭐ (보통)</option>
+                                        <option value="2">⭐⭐ (미흡)</option>
+                                        <option value="1">⭐ (불만족)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="log-expenses">💸 지출 비용 (원)</label>
+                                <input type="number" id="log-expenses" placeholder="예: 75000" min="0">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="log-tags">🏷️ 태그 (쉼표 구분)</label>
+                            <input type="text" id="log-tags" placeholder="예: 강릉, 오션뷰, 한식, 가족여행">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="log-memo">📝 방문 후기 및 상세 메모</label>
+                            <textarea id="log-memo" rows="6" placeholder="방문했던 장소의 맛, 분위기, 주차 팁 및 감상에 대해 적어주세요..." required></textarea>
+                        </div>
+
+                        <button type="submit" id="logger-submit-btn" class="submit-btn">
+                            <i class="fa-solid fa-floppy-disk"></i> 기록 저장하기
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- Preview Modal -->
+        <div id="preview-modal" class="modal hidden" onclick="closeModalOnOuterClick(event)">
+            <div class="modal-content glass-panel">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <div class="modal-header">
+                    <div id="modal-meta-tag" class="category-badge">Travel</div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                        <h2 id="modal-title" style="margin: 0;">상세 보기</h2>
+                        <button id="btn-modal-download-pdf" class="submit-btn" style="margin: 0; padding: 0.45rem 1rem; font-size: 0.82rem; background: linear-gradient(135deg, var(--accent-emerald), var(--accent-emerald-hover)); border: none; height: auto; width: auto; display: none;">
+                            <i class="fa-solid fa-file-pdf"></i> ✨ PDF 브로셔 다운로드
+                        </button>
+                    </div>
+                    <div class="modal-sub-meta">
+                        <span id="modal-date"><i class="fa-regular fa-calendar"></i> 2026-06-04</span>
+                        <span id="modal-rating"><i class="fa-regular fa-star"></i> ⭐⭐⭐⭐⭐</span>
+                        <span id="modal-expenses"><i class="fa-solid fa-won-sign"></i> 0원</span>
+                    </div>
+                </div>
+                <div id="modal-body" class="markdown-preview"></div>
+                <div class="modal-footer">
+                    <span id="modal-filepath" class="filepath-text">Obsidian: </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Settings Modal -->
+        <div id="settings-modal" class="modal hidden" onclick="closeSettingsModalOnOuterClick(event)">
+            <div class="modal-content glass-panel settings-panel-modal">
+                <span class="close-btn" onclick="closeSettingsModal()">&times;</span>
+                <div class="modal-header">
+                    <h2><i class="fa-solid fa-gear"></i> Gemini API 키 설정</h2>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">
+                        여행 계획 생성 기능을 활성화하기 위해 Gemini API Key를 입력하세요. 이 키는 브라우저의 localStorage에만 로컬로 안전하게 저장됩니다.
+                    </p>
+                </div>
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <label for="settings-api-key">🔑 Gemini API Key</label>
+                    <input type="password" id="settings-api-key" placeholder="AIZAsy..." style="margin-top: 0.5rem;">
+                </div>
+                <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                    <button class="submit-btn" onclick="saveSettings()" style="margin-top: 0; flex: 1;">
+                        <i class="fa-solid fa-check"></i> 저장하기
+                    </button>
+                    <button class="icon-btn" onclick="closeSettingsModal()" style="border-radius: 12px; padding: 0 1.5rem;">
+                        취소
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Main JS file -->
+    <script src="main.js"></script>
+</body>
+</html>

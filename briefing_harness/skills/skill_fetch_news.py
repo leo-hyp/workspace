@@ -23,11 +23,16 @@ def fetch_all_news():
             data = response.json()
             
             if data.get('status') == 'ok':
-                for item in data.get('items', [])[:3]:
-                    title = item.get('title', '')
-                    # 한글 필터링
-                    if not has_korean(title):
+                for item in data.get('items', [])[:5]: # 여유있게 5개를 가져와서 필터링
+                    raw_title = item.get('title', '')
+                    # 구글 뉴스 RSS는 제목 끝에 ' - 매체명'을 붙이므로, 이를 제거한 순수 제목만 추출
+                    clean_title = raw_title.rsplit(' - ', 1)[0] if ' - ' in raw_title else raw_title
+                    
+                    # 한글 필터링: 매체명을 제외한 '순수 제목'에 한글이 없으면 가비지(영문 기사)로 간주하고 차단
+                    if not has_korean(clean_title):
                         continue
+                        
+                    title = raw_title
 
                     category = "사회"
                     if "보안" in source['name'] or "보안" in title: category = "보안/사고"

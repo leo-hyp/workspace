@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "전자신문 (IT)",
+    "url": "https://rss.etnews.com/Section901.xml"
+  },
+  {
+    "id": 2,
+    "name": "ZDNet (기술)",
+    "url": "https://feeds.feedburner.com/zdkorea"
+  },
+  {
+    "id": 3,
+    "name": "보안뉴스 (전문)",
+    "url": "https://www.boannews.com/media/news_rss.xml"
+  },
+  {
+    "id": 4,
+    "name": "데일리메드 (병원)",
+    "url": "http://www.dailymedipharm.com/rss/allArticle.xml"
+  },
+  {
+    "id": 5,
+    "name": "의협신문 (의료)",
+    "url": "https://www.doctorsnews.co.kr/rss/allArticle.xml"
+  },
+  {
+    "id": 6,
+    "name": "연합뉴스 (종합)",
+    "url": "https://www.yna.co.kr/rss/news.xml"
+  },
+  {
+    "id": 7,
+    "name": "매일경제",
+    "url": "https://www.mk.co.kr/rss/30000001/"
+  }
+]

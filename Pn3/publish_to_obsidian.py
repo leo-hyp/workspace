@@ -92,7 +92,7 @@ def publish_report(output_dir=None):
     
     if not os.path.exists(input_path):
         print(f"❌ Scraped research data not found at {input_path}")
-        return False
+        sys.exit(1)
         
     with open(input_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
@@ -100,14 +100,14 @@ def publish_report(output_dir=None):
     articles = data.get("articles", [])
     if not articles:
         print("⚠️ No articles to analyze.")
-        return False
+        sys.exit(1)
         
     print(f"Analyzing {len(articles)} articles with Gemini Flash...")
     analysis_text = get_gemini_analysis(articles)
     
     if not analysis_text:
         print("❌ Failed to obtain Gemini analysis.")
-        return False
+        sys.exit(1)
         
     # Write to Obsidian Vault
     if not os.path.exists(OBSIDIAN_VAULT_DIR):

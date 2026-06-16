@@ -1,144 +1,165 @@
 {
-  "lastUpdated": "2026-06-12 06:00:14",
+  "lastUpdated": "2026-06-16 11:48:16",
   "articles": [
     {
-      "title": " [단독] 솔루션 유지보수 바이텍시스템 랜섬웨어 감염... 삼성 등 고객사 정보 유출 ",
+      "title": " ‘AI 공격’보다 심각한 것?... 세 기업 중 하나 ‘공급망 공격’ 시달려 ",
       "source": "보안뉴스 (사고/보안)",
-      "link": "http://www.boannews.com/media/view.asp?idx=144081&kind=&sub_kind=",
+      "link": "http://www.boannews.com/media/view.asp?idx=144130&kind=&sub_kind=",
       "pubDate": "",
-      "description": "랜섬웨어 조직 킬린, 다크웹 사이트에 탈취 데이터 및 스크린샷 게시보안 관리로 뚫린 유지보수망 스피어 피싱 등 치명적 공급망 공격 우려[보안뉴스 조재호 기자] 국내 대기업과 금융권에 IT 솔루션 및 유지보수를 제공하는 전문기업 바이텍시스템이 랜섬웨어 조직의 공격을 받아 대규모 데이터 유출 사태가 발생했다. 고객사의 핵심 시스템을 관리하는 유지보수 업체의 특"
+      "description": "31%가 공급망 공격 경험... ‘AI 기반 공격’ 보다 높아[보안뉴스 강현주 기자] 전세계 기업 약 3개 중 한 곳은 ‘공급망 공격’에 시달리는 것으로 나타났다.  ‘AI 기반 공격’보다 더 심각한 수치다. 16일 카스퍼스키(한국지사장 이효은)는 ‘2025 공급망 및 신뢰 관계 공격 보고서’를 발표했다. 조사는 500명 이상 규모 기업에 소속된 기술 전문"
     },
     {
-      "title": " [쿠팡 해킹] 유출 “3000명뿐”이라던 쿠팡... CPO 무시한 처사였다 ",
+      "title": " 여의시스템, 2026년 글로벌 강소기업 1,000+ 프로젝트 성장단계 기업 선정 ",
       "source": "보안뉴스 (사고/보안)",
-      "link": "http://www.boannews.com/media/view.asp?idx=144080&kind=&sub_kind=",
+      "link": "http://www.boannews.com/media/view.asp?idx=144129&kind=&sub_kind=",
       "pubDate": "",
-      "description": "[3줄 요약]1. “CPO 배제하고 공격자 진술만 의존한 자체조사”2. “CPO 독립성 중요해지는데... 쿠팡은 무력화” 3. 법조계 “불법 행위로 간주될 수 있어” [보안뉴스 강현주 기자] 개인정보 유출은 “3000명 뿐”이라고 발표하며 이른바 ‘셀프 조사’ 논란을 일으킨 쿠팡의 행위에 대해 “개인정보보호책임자(CPO)의 독립적 업무 수행 방해”라는 진단"
+      "description": "수출 역량 갖춘 중소기업을 글로벌 강소기업으로 지정해 집중 육성자율제조 환경에 필요한 하드웨어·네트워크·소프트웨어 풀스택 라인업 갖춰[보안뉴스 엄호식 기자] 여의시스템(공동대표 성명기·성제현)이 중소벤처기업부 경기지방중소벤처기업청이 주관하는 ‘2026년 글로벌 강소기업 1,000+ 프로젝트’ 성장 단계 기업으로 선정됐다. 글로벌 강소기업 1,000+ 프로젝"
     },
     {
-      "title": " “여객선 조타실 CCTV 의무화 추진” 해수부, 여객선 사고 재발 방지 대책 본격화 ",
+      "title": " 윈스테크넷-중앙대 인공지능연구소, AI 보안기술 공동연구 협력 ",
       "source": "보안뉴스 (사고/보안)",
-      "link": "http://www.boannews.com/media/view.asp?idx=144079&kind=&sub_kind=",
+      "link": "http://www.boannews.com/media/view.asp?idx=144128&kind=&sub_kind=",
       "pubDate": "",
-      "description": "조타실 CCTV 설치·휴대전화 사용 제한AI 운항보조시스템 및 스마트 관제 도입등대·CCTV·드론 활용한 항로 안전 강화[보안뉴스 강초희 기자] 해양수산부(장관 황종우)는 여객선 사고 재발을 방지하고 여객선 이용객이 많은 여름 휴가철에 대비하기 위해 ‘여객선사고 재발 방지 혁신 전략’을 추진한다고 11일 밝혔다.해양수산부는 지난해 11월 발생한 대형 여객선"
+      "description": "산학 연계 통한 미래 보안기술 경쟁력 확보[보안뉴스 강현주 기자] 정보보안 전문기업 윈스테크넷(대표 김보연)은 중앙대학교 인공지능연구소와 인공지능(AI) 기반 보안기술을 공동 연구한다. 16일 윈스테크넷은 중앙대와 산학협력 활성화를 위한 업무협약(MOU)을 체결했다고 밝혔다. 이번 협약은 AI 기술의 급속한 발전과 함께 증가하고 있는 지능형 사이버 위협에"
     },
     {
-      "title": " 티빙, 유출 파장 속 CJ ONE 연동 계정 전면 잠금 돌입 ",
+      "title": " AI 위협은 AI로 막는다... 금융보안원, AI 활용 모의해킹 교육 확대 ",
       "source": "보안뉴스 (사고/보안)",
-      "link": "http://www.boannews.com/media/view.asp?idx=144078&kind=&sub_kind=",
+      "link": "http://www.boannews.com/media/view.asp?idx=144126&kind=&sub_kind=",
       "pubDate": "",
-      "description": "통합 로그인 이용한 수평 이동 2차 피해 차단 목적내달 2일까지 순차적 강제 로그아웃 및 계정 접속 차단 조치[보안뉴스 조재호 기자] 대규모 개인정보 유출 사태가 벌어진 온라인 동영상 서비스(OTT) 티빙(TVING)이 그룹사 통합 멤버십 씨제이원(CJ ONE) 계정 연동 차단이라는 초강수를 뒀다.티빙은 11일 내달 2일까지 CJ ONE 아이디로 티빙에 가"
+      "description": "생성형 AI 악용한 신종 위협 맞서 금융권 실무자 대상 실습 훈련 신설정적·동적 분석 기반 교육과 1-Day 취약점 악용한 내부망 침투 시나리오 도입[보안뉴스 조재호 기자] 금융보안원이 AI를 악용한 신종 보안 위협에 맞서 금융회사 보안 담당자를 대상으로 한 공격자 관점의 모의해킹 교육을 대폭 확대한다.금융보안원은 금융사 보안 담당자를 대상으로 AI 활용"
     },
     {
-      "title": " 카스퍼스키, 서울서 2026 APAC 파트너 컨퍼런스 개최... AI·XDR 보안 생태계 강화 ",
+      "title": " “방어자 위한 무기 빼앗겼다”... 미 보안 리더들, 앤트로픽 페이블5 규제 철회 촉구 ",
       "source": "보안뉴스 (사고/보안)",
-      "link": "http://www.boannews.com/media/view.asp?idx=144077&kind=&sub_kind=",
+      "link": "http://www.boannews.com/media/view.asp?idx=144127&kind=&sub_kind=",
       "pubDate": "",
-      "description": "글로벌 전문가 한자리 모여... 파트너 사업 성장 방향 및 XDR 도입 논의“보안은 비즈니스 연속성과 직결... 글로벌 가시성과 인텔리전스 기반 접근”[보안뉴스 조재호 기자] 카스퍼스키가 아시아태평양(APAC) 지역 주요 파트너사를 대상으로 ‘2026 아태 파트너 컨퍼런스’를 서울에서 개최했다고 11일 밝혔다. 이번 행사에는 아태 전역의 파트너사 대표, 카"
+      "description": "130여명 보안 전문가 연명 서한 전달AI 접근 차단은 공격자보다 방어자에 더 타격... 중국 AI 경쟁 뒤쳐져  [보안뉴스 한세희 기자] 앤트로픽 최신 AI 모델 ‘페이블5’에 대한 미국 정부의 접근 제한 조치에 사이버 보안 전문가들이 반발하고 나섰다. “방어자들의 손발을 묶는 위험한 조치”라는 주장이다. 페이스북 최고보안책임자(CSO)를 지낸 알렉스 스"
     },
     {
-      "title": "[단독]보안업계 주도 한국판 '글래스윙' 이달 출범 - 전자신문",
+      "title": "레드햇 “AI 플랫폼 경쟁 본격화…개방형 오픈소스가 핵심” - 전자신문",
       "source": "전자신문 (IT/인프라)",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1wWDBzN3hkMGZVdDBlZzJzRHNRNjJFZ3lXOHl2MnBKTS1TSTlkSFdMZ3ljSUk3bDdoS2loMy1VeXVHOXlHMTJiRmNrMl92UQ?oc=5",
-      "pubDate": "Thu, 04 Jun 2026 07:30:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5SYXRiUENhNkZDSW43Zm9ZckgyOTVMUGpfRGV3QmhzekxpWmltdXQ0dWwwRGl1S010N2dfMXhBTnNvZlhNSWttLUg5djJXdw?oc=5",
+      "pubDate": "Mon, 15 Jun 2026 08:00:00 GMT",
       "description": ""
     },
     {
-      "title": "[GSS 2026] “완벽한 차단은 불가능…AI 시대 보안 재편 시급” - 전자신문",
+      "title": "美 州법무장관들, 오픈AI 조사 착수…자료제출 요구 - 전자신문",
       "source": "전자신문 (IT/인프라)",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5PU1NqU1Fyd3I4RnAweTNISU1PTEtleENJZXRfRmRHVENGRWxPSUZ0eVk1VGJBd0I4QkhQcW9TOGNfRXhnZXMxXzVBRmFlUQ?oc=5",
-      "pubDate": "Tue, 09 Jun 2026 08:30:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1oMWJTd25HeC1sbEZ4cDkyNWl5eTlWdm1Ucm9YTFRVdUhaSjc4VTQ2M3ZhNzM0dmNMalNqdi1HajV3M1UzdGo5MkdnSVhQdw?oc=5",
+      "pubDate": "Sun, 14 Jun 2026 04:24:47 GMT",
       "description": ""
     },
     {
-      "title": "업스테이지, 생성형 AI 플랫폼 '타임리' 인수…AI 에이전트 본격화 - 전자신문",
+      "title": "AI 서비스 수요 폭증에…빅테크, 2년 안에 완공될 아시아 데이터센터 찾는다 - 전자신문",
       "source": "전자신문 (IT/인프라)",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE90QmpJUWZUVUJzUXJjS3ZONmxQWDhJSmdlVkh4OGlKeFJ4dFhKOS1udk81cGI0bXJ6b2VnRS0yM05XdkdsV19oaHRVNUI0UQ?oc=5",
-      "pubDate": "Tue, 09 Jun 2026 00:19:06 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE13R1cwb2s4V241ODFGcE4xZ2JZVGw2cGZwTEhjUWlTSFFUNldCd1dxMTV4T1JTRVh1VEhPZ0pQcUV0OXZDeUR6OHRlaVRNdw?oc=5",
+      "pubDate": "Mon, 15 Jun 2026 08:00:00 GMT",
       "description": ""
     },
     {
-      "title": "앤트로픽, AI 에이전트 보안 백서 공개… “제로트러스트 적용해야” - 전자신문",
+      "title": "미국 정부, 최첨단 AI '미토스' 수출 통제…앤트로픽 “원칙 없는 결정” - 전자신문",
       "source": "전자신문 (IT/인프라)",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBMYmF4bW5qaTBQM2FqdjBuNzFnNE5laFZnVUNmZmpMQXdWcmlaRUcwRE1LeDNkZGxtZHFLY0RrUHE0Z2NjTWNRd01xNlluZw?oc=5",
-      "pubDate": "Sat, 06 Jun 2026 02:30:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE11SHJ1MGVYYmpfSnBBWVBCQm9HeWNmejNjRGoyY3pRUjZqWjF2MGN3LVBJOEFfS1lYQmJhNVRYWVUyVnA3cFF6Rk16TEpkZw?oc=5",
+      "pubDate": "Sat, 13 Jun 2026 03:32:27 GMT",
       "description": ""
     },
     {
-      "title": "'AI가 저작권 침해하면 어쩌지'…AI 정책보험 나온다 - 전자신문",
+      "title": "[2026 K-디지털 브랜드 대상]AI 주도 지능형 사회의 표준을 세우다 - 전자신문",
       "source": "전자신문 (IT/인프라)",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5URnRPZGk3RnJaUmJoR2V2OU9OWG9WSEdWTWdjOEtaUHNKVW5tOWFlTjdZanZkVVdFOHRFZTVMNGJRRGJYajFBeE1YSDlXUQ?oc=5",
-      "pubDate": "Wed, 10 Jun 2026 08:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFB4ZnNRa0RXcUExcUhXSFBjTXB3NlVqdHIza0htRWxRZUJURmotNlg0bzk4d1lpZVczTHc0TFJFTEhlWmc3RllLc3VIYjNKZw?oc=5",
+      "pubDate": "Sun, 14 Jun 2026 04:00:00 GMT",
       "description": ""
     },
     {
-      "title": "아이폰17 일반 모델, 애플 최신 AI 기능 못 쓴다 - 지디넷코리아",
+      "title": "최태원 회장, AX 가속화 주문…\"1인 1에이전트 도입 해야\" - 지디넷코리아",
       "source": "ZDNet (글로벌기술)",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBTakdhbC01dEVpRkcyVktSWlRVTHZmaVRkMFgzUi00bWRDTkRNSE5hTnREWkVsNjhkUjhyRDVFTGkwdjVzLUxkWlRTb0ZHNEtJWlJ0ZTBR?oc=5",
-      "pubDate": "Tue, 09 Jun 2026 05:16:24 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1FUEF0NV90dGNIRnlwajJSN1RpRkpJOWVPemZlZ2VpU3BjYk5IbFlibHJkVHM0Yk5OcUpXaTJLRzU0TU5BM1RyTHp0Q3VVVWNjdHpzR2tn?oc=5",
+      "pubDate": "Sun, 14 Jun 2026 01:24:47 GMT",
       "description": ""
     },
     {
-      "title": "\"코드만 짜는 AI 그만\"…LG CNS, AI로 SI 체질 바꾼다 - 지디넷코리아",
+      "title": "몰카·부정시험 괜찮나…메타 AI 글래스, 궁금증 풀어보니 - 지디넷코리아",
       "source": "ZDNet (글로벌기술)",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFA5WmpLTksxd0RxVXhsSUo2UERWeGNZakNhZFNMcVQxT3hfS3pKN1BMVkVJVF9oMlQyYU9pQmZVZ0FKQTM0aWstTGRSMXlCVV9BN2M4R25R?oc=5",
-      "pubDate": "Mon, 08 Jun 2026 01:16:44 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5WU3U0Q1RuQ1M4ZHZWZE5QdGJ1Rl9rdW9fTmZRVjh2NHFVbHpQSjQ4cW1IT2MyX2NwZlRRekZmc3JGZ05iUWlWUXUwNmZ0Ynkwd1dVZDdR?oc=5",
+      "pubDate": "Tue, 16 Jun 2026 01:06:53 GMT",
       "description": ""
     },
     {
-      "title": "앤트로픽, 페이블·미토스5 동시 공개…\"AI 성능·안전장치 최상위\" - 지디넷코리아",
+      "title": "샘 알트먼 방한 연기…오픈AI \"불가피한 개인 사정\" - 지디넷코리아",
       "source": "ZDNet (글로벌기술)",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9DRkpsM21fS0hJZ0Ywb2R3dXRCUHNvU2xZS2lWR2d1aXlicXRxOHhwaUFTamJGUU5HblkzQmRsVmM1SzNURnM3b0kyNDZXZFBybl83cXlB?oc=5",
-      "pubDate": "Tue, 09 Jun 2026 23:43:22 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1YQUE3ZmhwNE85eXppZTR0NVJ5UWZoS1JPcFRHRWx0V1hiRnFyXzZBcFZCcFY1cENXd1dzR3I5dVhGeC1SZVp1YW9ib3M4dTJPS2N0c293?oc=5",
+      "pubDate": "Fri, 12 Jun 2026 08:11:13 GMT",
       "description": ""
     },
     {
-      "title": "SK-엔비디아, 'AI팩토리' 혈맹 구축...피지컬AI까지 맞손 - 지디넷코리아",
+      "title": "샘 알트먼, 네이버·카카오 연쇄 회동…AI 협력 모색 - 지디넷코리아",
       "source": "ZDNet (글로벌기술)",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBrZ0hPYzNUZ3dibEpGbE9Odjd2UElrNEZRTHlWN3YxUWpjN0xUcm9oN0p6NnlLbElsQjVMeV9JYnl1WWxOWnVfRWx2TTJHNU91NjBDNHJ3?oc=5",
-      "pubDate": "Mon, 08 Jun 2026 00:21:23 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9iTW4talFLQlA2Y05uZFdVYS1obVlkQzJXY3J0a2xKYmZHSkpQS2ZDUUtpdGtVblAtQTFfZkM4QTdzZXhaZVRIbHZGNGdlMUlOaEVmNjd3?oc=5",
+      "pubDate": "Thu, 11 Jun 2026 06:07:30 GMT",
       "description": ""
     },
     {
-      "title": "\"대체불가 대한민국 견인\"...'국가 AI대상' 18일 접수 마감 - 지디넷코리아",
+      "title": "삼성전자, 외부 생성형 AI 도입...\"AX 본격화\" - 지디넷코리아",
       "source": "ZDNet (글로벌기술)",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5VampCRThtRlNFcGJRdk94ZTZPamZxeEJOYVlRRWV3bzFaM2hmQVhTWmlZWVpCWC1UUHkyYk0wcEl3VU9xV0RpaEpnYW5rVXZVSjc4V1FR?oc=5",
-      "pubDate": "Wed, 10 Jun 2026 01:23:29 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5RelJoc0ZvTG44Q0Qtd1lSUWdUV1BSN3MzRG4xN3d5UWhkQlJGLW9Db19RRUNibUFlQjg2aGtkVkRIbTVTT0RZcjlOYVNoZzFlU0YzaGtR?oc=5",
+      "pubDate": "Wed, 10 Jun 2026 23:44:46 GMT",
       "description": ""
     },
     {
-      "title": "바이낸스 \"AI 에이전트도 실수하고 조종당해…보안 신경써야\" - 연합뉴스",
+      "title": "SK AX, AI 에이전트로 기업 혁신…'에이전틱 기업' 청사진 - 연합뉴스",
       "source": "Google News (AI 에이전트)",
-      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9neXozMmlCQmJnR25XQzd1Vmd1RXdqNE5VMkNuWnNfT0VQeC1vc1hWRjUtZFpXc3lYZjNaLTZHelZXNjNIY1h2eVlXal81eDVHR2NHdUh2QVMtOHZyaDdNddIBYEFVX3lxTE9neXozMmlCQmJnR25XQzd1Vmd1RXdqNE5VMkNuWnNfT0VQeC1vc1hWRjUtZFpXc3lYZjNaLTZHelZXNjNIY1h2eVlXal81eDVHR2NHdUh2QVMtOHZyaDdNdQ?oc=5",
-      "pubDate": "Thu, 11 Jun 2026 02:50:45 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBTbDVLaHk1RERfZ3ZiV2tNWGlXMXVkaVkzcFFIQXY4YVc4WVBINHJLMXpvbjFhR2xEWS1DUTV6d0Z3MzlKaWtyYlBHNFVWdEs3ZW1CcnJ1S2hoTlpJNk9UVNIBYEFVX3lxTFBTbDVLaHk1RERfZ3ZiV2tNWGlXMXVkaVkzcFFIQXY4YVc4WVBINHJLMXpvbjFhR2xEWS1DUTV6d0Z3MzlKaWtyYlBHNFVWdEs3ZW1CcnJ1S2hoTlpJNk9UVA?oc=5",
+      "pubDate": "Tue, 16 Jun 2026 01:01:13 GMT",
       "description": ""
     },
     {
-      "title": "코인베이스, AI 에이전트 전용 가상자산 거래 플랫폼 출시…주가 3%↑ - 마켓인",
+      "title": "“AI 직원과 일한다”…서초구, AI 에이전트 업무 지원 플랫폼 첫 도입 - 전자신문",
       "source": "Google News (AI 에이전트)",
-      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBhRGJuNDRGSDc4UzROQWk2UndKcVVaWEpZcng0Z19oY2xxVEFHNEJ4Q0t3MDgtbC1iYnBxUmVTRFo1blhhdzVXZUxLaHIxOVdBN1VTUGstMVNnOEFSbXZicDRfbDNvVVZ6WGZrR1dIMVljcU0?oc=5",
-      "pubDate": "Thu, 11 Jun 2026 18:52:44 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBfTDBqU0pIRG5kT0dQQk1iLWlxdGJEMkE1d2xRVE50aFpJdUJDZUZVS3JyNExBRTNRLU5xUGNiYkRsZ3owYXZ2MHZUYmxaZw?oc=5",
+      "pubDate": "Tue, 16 Jun 2026 01:14:34 GMT",
       "description": ""
     },
     {
-      "title": "[AI 워크 서밋] “2026년 이후 경쟁력은 AI가 결정”... 기업 실무 패러다임 바꾸는 'AI 에이전트' - 전자신문",
+      "title": "신동빈 \"AX 없이는 생존 어렵다\"…롯데, 전 임직원 AI 에이전트 교육 - v.daum.net",
       "source": "Google News (AI 에이전트)",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFA1U25LZDcxTTJKZGdIUzZpM2pldUNNM2pzZnp1dGUwdzJneDZPalJPSnZKVTJha2VieXZuRmVSbW5YZ1NOZGlvM3lYdTdzdw?oc=5",
-      "pubDate": "Thu, 11 Jun 2026 08:00:00 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1qSGhlZUJKQUFLMnNvQjliZmh0X1piYi1qTldqc1JqSS1yR04td0RlLXFtNE1HVlJFRjBhS3BXYktyM1hRUVBrdmVCY2p0d1k?oc=5",
+      "pubDate": "Tue, 16 Jun 2026 01:21:03 GMT",
       "description": ""
     },
     {
-      "title": "숙명여대 최경주 교수, \"AI 에이전트 시대, 대학은 무엇을 준비해야 하는가?\" - 인공지능신문",
+      "title": "SKT, AX 혁신 가속…AI에이전트에 사번·권한 등 부여 - 테크월드",
       "source": "Google News (AI 에이전트)",
-      "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5SZWNWTDNtUHpXbzg0VXY5MDFLTUUzbWlGSmJKLUpBcmpnRFJVVTdtd3B4SFEtVm1RUm0zUHhyS0dLUFNlQVlUcm52Zk1jLXhNSnE1QmRRWjNvLXNrTEN5cklnN0Q3TjA?oc=5",
-      "pubDate": "Thu, 11 Jun 2026 07:33:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFA1WXhtVGQ1VVhSM1g2Z1lqZG9tUS1GbzcwTmlSS2JLdlcwd0VLOVFEMUNDWWxqQTM3UzRlTTlUWUowNzRpVTBDN2lMdWFFcFpVdUhIQ0xkZWwxcUN5TFhzdl9aTy1qX2RK?oc=5",
+      "pubDate": "Tue, 16 Jun 2026 01:14:40 GMT",
       "description": ""
     },
     {
-      "title": "코인베이스, AI 에이전트 금융 거래 플랫폼 출시 - 블루밍비트",
+      "title": "SKT, AI에이전트에 사번 부여...사내 AX 가속 - 지디넷코리아",
       "source": "Google News (AI 에이전트)",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFAwWi1jNVlFalBSU2JjZjJhOHBSMnB3bWN6MGZ1eWFZVkxaT3RSTDhHU2tnWFFKeDlEdzA1NmlheVhuU1hQc0ludE5OV0ljWW04?oc=5",
-      "pubDate": "Thu, 11 Jun 2026 18:00:50 GMT",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9NRHRKOElhSy1hcEVpZTItZVNJRzlNNzVEMWFQd3RQSEZaWFNxeERnTV9PR3VXdmtiZ3R2aW0wQnVNY2xCaVBZeDVlbTY3UmlUUzZ1Vld3?oc=5",
+      "pubDate": "Tue, 16 Jun 2026 01:07:23 GMT",
+      "description": ""
+    },
+    {
+      "title": "사람 8명 할 일 로봇 1대가…용접 숙련공 뺨치는 '피지컬 AI' - 연합뉴스",
+      "source": "Google News (자율주행/로봇)",
+      "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9nN0NERVBnLTliVFBDQ1lmVHV5NW1RTnprRW1OUlp0QTNZVjUzREZKZzN4QkpoMjZUTVlLRl83bkRIU0gwdHJfclh0MTRQc293aGc4ZHZ5WGQ3TDZFRWh1MtIBYEFVX3lxTE9nN0NERVBnLTliVFBDQ1lmVHV5NW1RTnprRW1OUlp0QTNZVjUzREZKZzN4QkpoMjZUTVlLRl83bkRIU0gwdHJfclh0MTRQc293aGc4ZHZ5WGQ3TDZFRWh1Mg?oc=5",
+      "pubDate": "Sun, 14 Jun 2026 03:00:01 GMT",
+      "description": ""
+    },
+    {
+      "title": "테더 \"자율 로봇에 금융 도구 필요\"…뉴라 로보틱스 시리즈C 주도 - 디지털투데이",
+      "source": "Google News (자율주행/로봇)",
+      "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE0yOW9sM0FTS0JSR2ZfMTZPWjRBSnRwZktDd0FjOEI4SEUyRGRhOFBOZldXUnlKVXhFcWpRT3YxcW04NGVKTXpVZlR1akM3NHQxV2xoRUJuMnBIQlVsWllUYlkxUDlrQVQ1amFoRW8tNVVRQUU?oc=5",
+      "pubDate": "Sat, 13 Jun 2026 05:42:44 GMT",
+      "description": ""
+    },
+    {
+      "title": "제철소의 혁신, AI 자율로봇...\"고장 롤러 빠르게 탐지하고 교체한다\" - 공감신문",
+      "source": "Google News (자율주행/로봇)",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB4bkEwQ1Bna2pVckJaMmFwc18yN1Q4YTBsWGlUNXVDekdmMk5xUmFMOWFqV0pXQjdXWWs0SnRmOUo4TDktV0xyUlFBYlctM2tJQTYyRFJoNEJGaV8tMTJKU1dBRVdCNVFj?oc=5",
+      "pubDate": "Mon, 15 Jun 2026 02:09:58 GMT",
       "description": ""
     },
     {
@@ -153,27 +174,6 @@
       "source": "Google News (자율주행/로봇)",
       "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE42YktsSTRReFE0TDRSR2JpUHhyZTZoTXROcVBpYjY0eFYzOWQ4akZ5bGpGNDhmcHpYQ2U3VXV3RkxhTThNbzBHY0lJeExMckdCYnFFaHpvUXlyT1cyWUtQWHFId1dkQQ?oc=5",
       "pubDate": "Tue, 31 Mar 2026 07:00:00 GMT",
-      "description": ""
-    },
-    {
-      "title": "엔비디아-ABB, AI 자율 로봇 개발을 위한 파트너십 체결 - AI타임스",
-      "source": "Google News (자율주행/로봇)",
-      "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1PTm83WGlxWTF5LXRDbUxXMWNaSUF1Zm1zV1Q3OXpwUlgzdi12WFBBd2JUV0tFQU1wV2o5MWd3WHhvODUyRHNCS0xkM0kzUFhtcFdqczJUQm9yQnlIV2hvdmZzX3ZQTFdrOGc?oc=5",
-      "pubDate": "Tue, 10 Mar 2026 07:00:00 GMT",
-      "description": ""
-    },
-    {
-      "title": "바바패션, 빅데이터 기반 AI 자율로봇으로 물류 처리 효율 4배 향상 - 패션비즈",
-      "source": "Google News (자율주행/로봇)",
-      "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE43Rm1yNXNUNGFaNm16M2JZSkZoUmFKNXpKdTJIWk5nNFpTXy0tOXhnVXYxR05QMmRHRnVES3hqdXRVeVhpa1U4eDY1bGlnZHVn?oc=5",
-      "pubDate": "Wed, 14 Jan 2026 08:00:00 GMT",
-      "description": ""
-    },
-    {
-      "title": "소금 알갱이보다 작다… 빛으로 움직이는 초소형 자율 로봇 - 전자신문",
-      "source": "Google News (자율주행/로봇)",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBLVG5ZcE0xVHI3TzB0Y0dLSzl2YmdTWU44M1Robk0xRXFPdmE2aDBRMlFfbkU0c25mMVlIOXRJbWN0dzRnT0VQWFpBSnJldw?oc=5",
-      "pubDate": "Wed, 31 Dec 2025 08:00:00 GMT",
       "description": ""
     }
   ]

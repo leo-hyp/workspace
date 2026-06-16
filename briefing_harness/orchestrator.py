@@ -44,8 +44,10 @@ def run_orchestrator():
         briefing_html = skill_review_content.generate_briefing(news_items)
         if "⚠️ 유효한 뉴스가 없습니다." in briefing_html:
             raise ValueError("Reviewer 에러: 생성된 브리핑이 비어 있습니다.")
+        if "임시 템플릿 사용 중입니다" in briefing_html or "AI 분석 엔진 오류" in briefing_html:
+            raise ValueError("콘텐츠 검증 에러: AI 분석 실패로 임시 템플릿이 포함된 부실한 브리핑이 생성되었습니다. (발송 및 저장 차단)")
     except Exception as e:
-        send_alert(f"브리핑 요약 중 치명적인 에러 발생: {e}")
+        send_alert(f"브리핑 요약/검증 중 치명적인 에러 발생: {e}")
         sys.exit(1)
 
     print("✅ [Reviewer] 브리핑 HTML 생성 완료.")

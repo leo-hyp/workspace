@@ -32,8 +32,6 @@ def send_toast(title, message):
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
     print("[Orchestrator] Pn6_HealthChecker started.")
-    print("[Orchestrator] Waiting 30 seconds for services to settle...")
-    time.sleep(30)
     
     results = {}
     try:
@@ -71,8 +69,8 @@ def main():
     else:
         title = "🔴🔑 Hermes System: Attention Required!"
         
-    send_toast(title, report_message)
-    print("[Orchestrator] Pipeline execution completed and reported to user.")
+    # send_toast(title, report_message) # 팝업 알람 제거 (사용자 요청)
+    print("[Orchestrator] Pipeline execution completed and reported to log (Toast Notification Disabled).")
 
 if __name__ == "__main__":
     main()

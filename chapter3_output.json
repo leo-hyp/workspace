@@ -1,0 +1,18 @@
+{
+    "critical_events": [
+        {
+            "timestamp": "2026-06-17T10:00:00",
+            "cpu": 89,
+            "memory": 91,
+            "status": "WARNING"
+        },
+        {
+            "timestamp": "2026-06-17T11:00:00",
+            "cpu": 95,
+            "memory": 96,
+            "status": "CRITICAL"
+        }
+    ],
+    "avg_cpu": 69.75,
+    "avg_memory": 81.75
+}

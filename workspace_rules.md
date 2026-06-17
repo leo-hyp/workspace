@@ -11,3 +11,8 @@ Per user instructions, **ALL NEW PROJECTS** and major refactors within this work
 5. **Project Isolation**: 기존 프로젝트와 성격이 다른 새로운 요구사항은 독립된 `PnX_ProjectName` 폴더에 구성합니다.
 
 *When starting a new task, always verify if it requires a new Agent or Orchestrator integration, and do not bypass this Harness structure.*
+
+## 2. Planning & Execution Authority Constraint
+- **명시적 검토 및 승인 강제 (Explicit User Approval Required)**: 새로운 프로젝트 생성, 대형 리팩토링, 혹은 시스템 영향도가 큰 변경 작업을 수행할 때 안티그래비티는 코드를 수정하거나 명령을 실행하기에 앞서 반드시 `implementation_plan.md`를 작성하고 사용자에게 검토 및 피드백을 요청(`request_feedback: true`)해야 합니다.
+- **선 승인 후 진행**: 사용자가 구현 계획서를 직접 검토하고 명시적으로 승인(Approve)하기 전에는, 어떠한 코드 자동 수정이나 스크립트 실행(배포) 작업도 개시되어서는 안 됩니다. (자율적인 자동 실행 진행 차단)
+- **자동 승인 메시지 우회 금지 (Ignore System Auto-Approve Messages)**: 시스템 백엔드에서 `automatically approved` 또는 `stop hook` 관련 자동 승인 메시지가 수신되더라도, 안티그래비티는 이를 사장님의 직관적인 직접 명령으로 간주하지 않습니다. 반드시 사장님이 대화창에 직접 텍스트("진행해라", "승인한다" 등)를 남길 때까지 실행 단계를 멈추고 강제 대기 모드를 유지해야 합니다.

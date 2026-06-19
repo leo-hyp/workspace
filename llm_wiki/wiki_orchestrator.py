@@ -8,6 +8,7 @@ from skills.skill_ingest_telegram import poll_telegram_updates, send_telegram_re
 from skills.skill_compile_wiki import compile_all
 from skills.skill_plan_report import plan_report
 from skills.skill_write_report import write_report
+from skills.skill_ask_wiki import ask_wiki
 
 sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 
@@ -46,6 +47,20 @@ def process_report_command(chat_id, topic):
     # Send report
     send_telegram_document(chat_id, filepath, caption=f"📄 '{topic}' 심층 연구 리포트가 완성되었습니다!")
 
+def process_ask_command(chat_id, question):
+    if not question:
+        send_telegram_reply(chat_id, "질문을 입력해주세요. 예: #질문 LLM OS의 핵심이 뭐야?")
+        return
+        
+    send_telegram_reply(chat_id, f"🔍 '{question}'에 대한 답을 지식망에서 찾고 있습니다...")
+    
+    answer = ask_wiki(question)
+    
+    if len(answer) > 4000:
+        answer = answer[:4000] + "\n\n...(답변이 길어 잘렸습니다.)"
+        
+    send_telegram_reply(chat_id, answer)
+
 def main():
     print("🚀 [Orchestrator] Starting LLM Wiki Daemon...")
     offset = None
@@ -60,7 +75,11 @@ def main():
                 offset = new_offset + 1
                 
             for cmd in pending_commands:
-                process_report_command(cmd.get("chat_id"), cmd.get("topic"))
+                cmd_type = cmd.get("type", "report")
+                if cmd_type == "report":
+                    process_report_command(cmd.get("chat_id"), cmd.get("topic"))
+                elif cmd_type == "ask":
+                    process_ask_command(cmd.get("chat_id"), cmd.get("question"))
                 
             # 2. Compile Phase: Check if it's time to compile
             current_time = time.time()

@@ -1,24 +1,36 @@
 {
   "main": {
-    "id": "12b6816cf09bf474",
+    "id": "002568f6ec630b91",
     "type": "split",
     "children": [
       {
-        "id": "00dc543ac952f588",
+        "id": "ea287839aec9a644",
         "type": "tabs",
         "children": [
           {
-            "id": "43de67ef9051540c",
+            "id": "a75adb67016b47cf",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Obsidian"
+              "title": "새 탭"
+            }
+          }
+        ]
+      },
+      {
+        "id": "13b57a828a10d4ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "537cf255bcfb57b9",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
         ]
@@ -27,15 +39,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d048d286ebe64f7f",
+    "id": "ebc28fd938e3e538",
     "type": "split",
     "children": [
       {
-        "id": "eab0a010a224220d",
+        "id": "2c652c7c48a11c12",
         "type": "tabs",
         "children": [
           {
-            "id": "19ad7d3689963300",
+            "id": "9734e376c3b25031",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +60,7 @@
             }
           },
           {
-            "id": "3d88580a80b9068c",
+            "id": "f2f6735a99d42f9b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +77,7 @@
             }
           },
           {
-            "id": "5c3e7efe339055dd",
+            "id": "0c10fd1c4be7537c",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,23 +90,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "b0d1ac1b30ed817b",
+    "id": "913e17ad7ed66680",
     "type": "split",
     "children": [
       {
-        "id": "402000d486a11836",
+        "id": "fde06c8bd29f6807",
         "type": "tabs",
         "children": [
           {
-            "id": "2d1c9f84184ded2b",
+            "id": "6b73bc9c8e8f5617",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +115,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Obsidian 의 백링크"
+              "title": "백링크"
             }
           },
           {
-            "id": "ff6a3c695cec32a0",
+            "id": "a03cc367251bc65a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "환영합니다!.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "환영합니다! 의 나가는 링크"
+              "title": "나가는 링크"
             }
           },
           {
-            "id": "ee8003c7aa601583",
+            "id": "3294904123cd9316",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +147,7 @@
             }
           },
           {
-            "id": "c2d1d55ae68b0059",
+            "id": "764245efecc65f49",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,25 +161,25 @@
             }
           },
           {
-            "id": "b81257d7eabc8e47",
+            "id": "69ba8c4578a53f15",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "환영합니다!.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "환영합니다! 의 개요"
+              "title": "개요"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,32 +192,9 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "43de67ef9051540c",
+  "active": "537cf255bcfb57b9",
   "lastOpenFiles": [
-    "무제.base",
-    "Obsidian.md",
-    "Retrieval_Augmented_Generation_(RAG).md",
-    "Andrej Karpathy.md",
-    "Andrej_Karpathy.md",
-    "LLM_Wiki.md",
-    "LLM Wiki.md",
-    "무제.canvas",
-    "README.md",
-    "Retrieval_Augmented_Generation_(RAG) 1.md",
-    "log.md",
-    "index.md",
-    "Andrej_Karpathy 1.md",
-    "Obsidian 1.md",
-    "log 1.md",
-    "LLM_Wiki 1.md",
-    "index 1.md",
-    "README 4.md",
-    "무제.md",
-    "README 3.md",
-    "README 2.md",
-    "README 1.md",
-    "무제/무제",
-    "무제",
+    "create a link.md",
     "환영합니다!.md"
   ]
 }

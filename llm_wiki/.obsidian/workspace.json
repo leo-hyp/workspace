@@ -1,24 +1,24 @@
 {
   "main": {
-    "id": "12b6816cf09bf474",
+    "id": "eed740eed0e364d4",
     "type": "split",
     "children": [
       {
-        "id": "00dc543ac952f588",
+        "id": "c58ae2ae1836f9ec",
         "type": "tabs",
         "children": [
           {
-            "id": "43de67ef9051540c",
+            "id": "fb317f2c28ce3c49",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian.md",
+                "file": "LLM Wiki.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Obsidian"
+              "title": "LLM Wiki"
             }
           }
         ]
@@ -27,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d048d286ebe64f7f",
+    "id": "6aa91b9af301189d",
     "type": "split",
     "children": [
       {
-        "id": "eab0a010a224220d",
+        "id": "4419ea1acc9a7995",
         "type": "tabs",
         "children": [
           {
-            "id": "19ad7d3689963300",
+            "id": "fb8295dc5a914dc8",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +48,7 @@
             }
           },
           {
-            "id": "3d88580a80b9068c",
+            "id": "8075cd071262284c",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +65,7 @@
             }
           },
           {
-            "id": "5c3e7efe339055dd",
+            "id": "23d6141c081ced6d",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,23 +78,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "b0d1ac1b30ed817b",
+    "id": "e569e15e034bf925",
     "type": "split",
     "children": [
       {
-        "id": "402000d486a11836",
+        "id": "04ed8edf9478bdb6",
         "type": "tabs",
         "children": [
           {
-            "id": "2d1c9f84184ded2b",
+            "id": "a8dd935a442eaef5",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian.md",
+                "file": "LLM Wiki.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +104,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Obsidian 의 백링크"
+              "title": "LLM Wiki 의 백링크"
             }
           },
           {
-            "id": "ff6a3c695cec32a0",
+            "id": "c7ba28aa2f5b7417",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "환영합니다!.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "환영합니다! 의 나가는 링크"
+              "title": "나가는 링크"
             }
           },
           {
-            "id": "ee8003c7aa601583",
+            "id": "1b3f8302fe8f8304",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +136,7 @@
             }
           },
           {
-            "id": "c2d1d55ae68b0059",
+            "id": "2cce97cfe1d1d3a9",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,18 +150,17 @@
             }
           },
           {
-            "id": "b81257d7eabc8e47",
+            "id": "f009463bcc0ab9ce",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "환영합니다!.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "환영합니다! 의 개요"
+              "title": "개요"
             }
           }
         ]
@@ -182,32 +180,33 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "43de67ef9051540c",
+  "active": "fb317f2c28ce3c49",
   "lastOpenFiles": [
-    "무제.base",
-    "Obsidian.md",
-    "Retrieval_Augmented_Generation_(RAG).md",
+    "reports/20260619_154724_안드레_카파시_llm_wiki_개념_이해.md",
     "Andrej Karpathy.md",
-    "Andrej_Karpathy.md",
-    "LLM_Wiki.md",
     "LLM Wiki.md",
-    "무제.canvas",
-    "README.md",
-    "Retrieval_Augmented_Generation_(RAG) 1.md",
-    "log.md",
-    "index.md",
-    "Andrej_Karpathy 1.md",
-    "Obsidian 1.md",
-    "log 1.md",
-    "LLM_Wiki 1.md",
-    "index 1.md",
-    "README 4.md",
-    "무제.md",
-    "README 3.md",
-    "README 2.md",
-    "README 1.md",
-    "무제/무제",
-    "무제",
-    "환영합니다!.md"
+    "wiki/Andrej_Karpathy.md",
+    "wiki/Retrieval_Augmented_Generation_(RAG).md",
+    "wiki/LLM_Wiki.md",
+    "wiki/Obsidian.md",
+    "wiki/index.md",
+    "wiki/log.md",
+    "텔레그램 (Telegram).md",
+    "wiki/Telegram.md",
+    "RULES.md",
+    "skills/__pycache__/skill_write_report.cpython-311.pyc",
+    "skills/__pycache__/skill_plan_report.cpython-311.pyc",
+    "skills/skill_write_report.py",
+    "skills/skill_plan_report.py",
+    "agents/report_writer_agent.md",
+    "agents/report_planner_agent.md",
+    "raw/archive/20260619_150038_telegram.txt",
+    "raw/20260619_150038_telegram.txt",
+    "raw/20260619_150034_telegram.txt",
+    "raw/20260619_150030_telegram.txt",
+    "raw/20260619_150026_telegram.txt",
+    "raw/20260619_150022_telegram.txt",
+    "agents/compile_agent.md",
+    "agents/ingest_agent.md"
   ]
 }

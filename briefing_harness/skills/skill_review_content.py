@@ -55,7 +55,7 @@ def get_ai_insight(news_list):
         "temperature": 0.3
     }
     
-    gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={GEMINI_API_KEY}"
+    gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={GEMINI_API_KEY}"
     gemini_payload = {"contents": [{"parts": [{"text": prompt}]}]}
     
     try:

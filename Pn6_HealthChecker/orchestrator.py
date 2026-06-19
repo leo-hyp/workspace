@@ -63,6 +63,19 @@ def main():
     report_message = "\n".join(report_lines)
     print(report_message)
     
+    # 3.5 자가 복구 자동화 (Self-Healing)
+    if not results.get("gateway"):
+        print("[Orchestrator] 🚨 게이트웨이 정지 또는 오류 감지. 자가 복구 프로세스(hermes-gateway 재기동) 작동 중...")
+        try:
+            restart_cmd = ["cmd.exe", "/c", "set PATH=C:\\Users\\ismadmin\\AppData\Local\\hermes\\node;%PATH% && pm2 restart hermes-gateway"]
+            res = subprocess.run(restart_cmd, capture_output=True, text=True)
+            if res.returncode == 0:
+                print("[Orchestrator] ✅ 게이트웨이 자동 재시작 명령이 성공적으로 전달되었습니다.")
+            else:
+                print(f"[Orchestrator] ❌ 게이트웨이 자동 재시작 실패: {res.stderr}")
+        except Exception as err:
+            print(f"[Orchestrator] ❌ 게이트웨이 재시작 도중 예외 발생: {err}")
+    
     # Determine overall status
     if all(v is True for k, v in results.items() if k != "error") and "error" not in results:
         title = "🔴🔑 Hermes System: All Systems Operational"

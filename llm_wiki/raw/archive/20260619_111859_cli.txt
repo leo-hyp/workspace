@@ -1,0 +1,1 @@
+Andrej Karpathy proposed an idea called LLM Wiki in April 2026. He says Obsidian is the IDE, LLM is the programmer, and Wiki is the codebase. This solves the problem of traditional RAG where knowledge is forgotten.

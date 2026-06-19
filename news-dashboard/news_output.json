@@ -6,399 +6,131 @@
   },
   "news": [
     {
-      "category": "병원/의료",
-      "title": "의사연금제도 필요성 '공감'…관건은 '안전성'과 이것? - 의협신문",
-      "source": "의협신문",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5oYXFOTW9ILUZBeDYxYVBmajJnVDZ3dTYxbXk4MHRNOVF3YnNUMTFDXzg0VVZUNmFXMFhXUmtpa3JYeTNZTXBodWtUM19LX0c3WFVXQ0dVVFlJV19RRS1TMWUzdWMzQ2gyNWYzTDUyNHV4UQ?oc=5",
-      "description": "의사연금제도 필요성 '공감'…관건은 '안전성'과 이것?  의협신문",
-      "pubDate": "2026-05-24 21:00:00"
-    },
-    {
-      "category": "병원/의료",
-      "title": "\"의료기사법 개정안 강행 시 거대한 투쟁 돌입할 것\" 강력 경고 - 의협신문",
-      "source": "의협신문",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBFVDNtN1I4Zk52bHBuMURxNDdIYzZMY1RNNFV2NkRlTHFFOUh0Vkc0MEZQWG5fUTRmX1RZbnZ1R1o4R0JRSC1OMHUzZVlpWl82cUNSSFNXOHh2N1lKcklGUUtFUHgxaXFfYUlhdzV3XzJJZw?oc=5",
-      "description": "\"의료기사법 개정안 강행 시 거대한 투쟁 돌입할 것\" 강력 경고  의협신문",
-      "pubDate": "2026-05-19 05:51:00"
-    },
-    {
-      "category": "병원/의료",
-      "title": "의료기사법 원포인트 심사에도 '계류'…\"처방 개념 충돌\" - 의협신문",
-      "source": "의협신문",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE5MaVhFZWlvTUpsV0NkM3lyb3k2bzEyLV9wOUNqcDdrMkZNRTJVbFZvUXJjUXJTSV9hWEs2UFFzLU9yWHRKRU1PbzZoZzd2UjF4cVNkalN3SWxYbGVTaXZaT3ZocGhMUXp1ODEtTW5hQ3VIQQ?oc=5",
-      "description": "의료기사법 원포인트 심사에도 '계류'…\"처방 개념 충돌\"  의협신문",
-      "pubDate": "2026-05-19 07:21:00"
-    },
-    {
-      "category": "병원/의료",
-      "title": "[의협 24시] - 의협신문",
-      "source": "의협신문",
-      "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOYXBCXy01ZXJQc3lvb2l0LXVlSkFMZDNZYzZrTktRTXI5ZHBrX3BWaWZTaTRWc3ZwM2phMkw4dTNLVjlreDBydE5iejJXX1o0Z1NkWS00Z0pYV05rWXhETkVWYWltU1plVzBZQ3M1ZnREdU1mcURzc3JxY0tiQ2VMVkhpNk5sMmlDbzZCZXQzcEw4SnE3Vk0yV2FuSlh6T2RETlk0OTVXU010QQ?oc=5",
-      "description": "[의협 24시]  의협신문",
-      "pubDate": "2026-05-22 13:12:32"
-    },
-    {
-      "category": "병원/의료",
-      "title": "의협 24시 - 의협신문",
-      "source": "의협신문",
-      "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNUGZUUFFEcUZaRklrM0VxZF9MOW5hU09tU3Zjdmk0VEJzdjg5XzN5Mjg2M0Nsc0xTaDBZQjdoNTRYakhELW14N0txb1AzT2UyRXpXTUJxZVNoUVpYWW9kSkstLUVyU01IVVpwSkZIMC1VXzR4Y2cxVjF0aWdlUUwxcjJLU0UxTzk1eWtSWUxxYlZEdG9wam9PZ0d3Ui10MDRWRmRZNlNyamg0WF92cENrQUY0MmJJVDlsZHhvY3ZPZjNvSWEzRnVFQTZVankxU2dRY00xUzNOMnBnSUZi?oc=5",
-      "description": "의협 24시  의협신문",
-      "pubDate": "2026-05-18 01:46:46"
-    },
-    {
-      "category": "병원/의료",
-      "title": "'진료수가, 관행수가의 55%' 사실이었다 - 의협신문",
-      "source": "의협신문",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBPeDNJZlBoN1VXY1Vpa3U3MnhPTVRvNUN1Ym9DTHdSN3Fzb2JIbTB3OTFWNWxaME9PSVQ3Ty05NzdQQlVCWTBLYktkazZFOTFCYnVqZC0xWDRyc0tBU1RRRGtUd0lIRms3aDVHQVNzdDhjdw?oc=5",
-      "description": "'진료수가, 관행수가의 55%' 사실이었다  의협신문",
-      "pubDate": "2016-01-12 08:00:00"
-    },
-    {
-      "category": "병원/의료",
-      "title": "의협신문 - 의협신문",
-      "source": "의협신문",
-      "link": "https://news.google.com/rss/articles/CBMimgNBVV95cUxPdEJWWVp4OEZrVG9UNGMzYU5MZTEwT0IyU3VBLTN4Tmt4eF9JbWlFOUpYM25keGpoanByMXB0cEprTFc4MGtGV1drRjJSa0k2MlJyYmhBbDY0SDhueGJUc21zM0ZnbUt4YmFTUEpKM0JqQkhXZDNvY2RXczI2eU5zeHNUN3lCb2xEa3pVa2lra2pzZzZ3eVVXTGlHbjlMa2NGYnB5ZWtRTHc3d3RyempaNGd4all4VWJYcVVRQW53eXZjTmVYMGhBS0R2N0hRZ3NMQXlULTFXTEdPM2N5ZHhNSkUtc1NtNVdMT2dwN3g0dlpCUU9lRjlOR294RWxGSlR0Nl9CMmVFejhMZHpSenRvc0plMFA0QzhWRlVxd2lFS3VLbVljNXdlbUFQdERDLWo3YmtxZmdSTlU5blhCbmNUUkRDZ0dkLUtObXhzZGtkVUt0Z0dMRktRRGxpVnZ1VDViM1dNRFV1amdQSnNvNVhfLWRpYl9Od1VtMy1nTThHa2ZBakR5ZDVScDR4NzVzazlwNkJFd2NUSERzdw?oc=5",
-      "description": "의협신문  의협신문",
-      "pubDate": "2025-12-28 07:28:58"
-    },
-    {
-      "category": "병원/의료",
-      "title": "'의료기사법 개정 결사 저지' 전국 의사·치과의사 대표자 궐기대회 - 의협신문",
-      "source": "의협신문",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9TMjhGUDVGRzlJbU1GOFcxWTNMMTFCU2c4V3pwRkZIM1ZUMk5IeXNhMTFZMWlaelJITTVmQmdIYmJSMjJwRVNPMTFCWEx1RnBZX2IzNmRIYTFBNUEwZG9hSVJvYld1SzhGUElrcg?oc=5",
-      "description": "'의료기사법 개정 결사 저지' 전국 의사·치과의사 대표자 궐기대회  의협신문",
-      "pubDate": "2026-05-19 06:37:21"
-    },
-    {
-      "category": "병원/의료",
-      "title": "장기요양 재택의료센터 '의원' 추가 모집...6월 13일 마감 - 의협신문",
-      "source": "의협신문",
-      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9ZZXItTTRPczF1Q1p1Qkk2ZkhYdHVvOFlZWG5aUDNlYmt3NGp1QVZHUWhGUjJ2ZlJRdlNYMmpTUVUtLWwzblFEa1ZqdlhBYnB4TG1zTGZDenVjbnBHNnFaM3NtYUVBSTNpOF9kNXd1c052Zw?oc=5",
-      "description": "장기요양 재택의료센터 '의원' 추가 모집...6월 13일 마감  의협신문",
-      "pubDate": "2025-05-23 07:00:00"
+      "category": "IT/기술",
+      "title": "노태문 사장, 이달 말 中 BOE 방문…스마트폰·TV 협력 확대 논의 - 전자신문",
+      "source": "전자신문",
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE83YW1oRXNKeENqY2dhLW5JOHRLbkF5d01Sa1ZxbC04dXVDVzBfblZORFVmV2poWkNaQUFlcVB6RFBPLU41LUtvR2NKRXVEdw?oc=5",
+      "description": "노태문 사장, 이달 말 中 BOE 방문…스마트폰·TV 협력 확대 논의&nbsp;&nbsp;전자신문"
     },
     {
       "category": "IT/기술",
-      "title": "삼성전자, 세계 최초 '900단 V낸드' 구현…1000단 시대 초읽기 - 전자신문",
+      "title": "TSMC, 반도체 '패널 레벨 패키징(PLP)' 본격 양산 준비…삼성과 한판승부 - 전자신문",
       "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE93R2lNVzBmeVFQVGpqb3ZPODk4dzhPNzkyLXQta0FnTElOS1dCSktEOS16SnZlXzlBMmR6QlVQdXg4YURxTjhGUWN5Z0M4QQ?oc=5",
-      "description": "삼성전자, 세계 최초 '900단 V낸드' 구현…1000단 시대 초읽기  전자신문",
-      "pubDate": "2026-05-25 07:30:00"
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1NYkVvcDJUclFLeUdBOFhSeXNWWFNJR0tsX19pd1JYSFVuR0VFcDhONUhPdXduSmRMeDNFeVM5NjMxQ0taYVhfb2NXLW9Sdw?oc=5",
+      "description": "TSMC, 반도체 '패널 레벨 패키징(PLP)' 본격 양산 준비…삼성과 한판승부&nbsp;&nbsp;전자신문"
     },
     {
       "category": "IT/기술",
-      "title": "대만 증시 폭등, 반도체株 줄줄이 사상 최고...AI 열풍에 '43,000' 돌파 - 전자신문",
+      "title": "협력사 납품단가 인상 요청 …SK하이닉스, 검토 착수 - 전자신문",
       "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE04U1VJak9BYzVWUUEydjY5TlE5UkV2aFBISHhxTjRvNmxQd0k3NWU2cFVzNU1PblVLWnoyUXJRWHhJcnZvLWFYcHNKSWs1UQ?oc=5",
-      "description": "대만 증시 폭등, 반도체株 줄줄이 사상 최고...AI 열풍에 '43,000' 돌파  전자신문",
-      "pubDate": "2026-05-25 07:23:06"
+      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFA3RzVoWFo5V0JpR0FYZmYxSWdIemEzdE5xUE1ETWhPd3hqT0phZG9BR2t5XzNDY3RsRXc5ZU9faUFvMUtUUWFjR2ZfbWlRQQ?oc=5",
+      "description": "협력사 납품단가 인상 요청 …SK하이닉스, 검토 착수&nbsp;&nbsp;전자신문"
     },
     {
       "category": "IT/기술",
-      "title": "'갤럭시S27 프로', 6.47인치 OLED 탑재...내년 상반기 4개 모델로 출시 - 전자신문",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5FWE5yNk1KWFBQQW1pWERYLWNZYnJmdkZlWVFTa3dQaG4tWXlKYzN3X0FEQVpKOW8xMjVIR3UyaU5IenpEdDRvMWxIM3FEdw?oc=5",
-      "description": "'갤럭시S27 프로', 6.47인치 OLED 탑재...내년 상반기 4개 모델로 출시  전자신문",
-      "pubDate": "2026-05-20 08:00:00"
+      "title": "[단독] SK, 美 AI 데이터센터 구축 검토…하이닉스 앞세워 인프라 확장 추진 - 지디넷코리아",
+      "source": "ZDNet",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBsbnB2OEFIT2NUS1hYUlIySHRCRE1pV3QxZDIxYnJtVzdmQkhmRzlFS1lXX1JMNXB4Q085azVneDE5VkpOSlhiUnY2ZWRreTNnQ2twYktn?oc=5",
+      "description": "[단독] SK, 美 AI 데이터센터 구축 검토…하이닉스 앞세워 인프라 확장 추진&nbsp;&nbsp;지디넷코리아"
     },
     {
       "category": "IT/기술",
-      "title": "“아틀라스 도입” 현대차그룹, SW 공장·로봇 부품 조직 신설 - 전자신문",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE5SdnVualRNU0ZkY01zdnU2cDJDNmFmblN5V3Q5b3gtQzlKM3ItV2luQXdzektzVVJkX19PYXJodTRaQVBaMmExNG85UnNiZw?oc=5",
-      "description": "“아틀라스 도입” 현대차그룹, SW 공장·로봇 부품 조직 신설  전자신문",
-      "pubDate": "2026-05-25 01:38:22"
+      "title": "카카오, 카톡 채팅방서 바로 묻고 답하는 ‘챗GPT 챗봇’ 출시 - 지디넷코리아",
+      "source": "ZDNet",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1TSTZqRXQ2clNOX3hPYm84bG9tSVlZNHRjc1MySUh1cmszeU11UmF4c3VVTWd3UmxOWURfc0hEQVI3XzhLLWd0UnBONVRMSnN3VHVKa0xB?oc=5",
+      "description": "카카오, 카톡 채팅방서 바로 묻고 답하는 ‘챗GPT 챗봇’ 출시&nbsp;&nbsp;지디넷코리아"
+    },
+    {
+      "category": "IT/기술",
+      "title": "[CIS 2026] One AI, Elevate All: 실질적인 효율과 혁신으로 만드는 비즈니스 성장 - 지디넷코리아",
+      "source": "ZDNet",
+      "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9fN01vUnRHaC03VVAtRGF3ZF9WZ1NseDFNRkdFeXd4V3FiVW85VG82TnFzc1Rmb2tiaWRXTS1IQ3EwMThGQXAwUTd2dFpqeGViR0FGVQ?oc=5",
+      "description": "[CIS 2026] One AI, Elevate All: 실질적인 효율과 혁신으로 만드는 비즈니스 성장&nbsp;&nbsp;지디넷코리아"
     },
     {
       "category": "보안/사고",
-      "title": "금융 망분리 규제 푼다…AI 보안체계 구축 속도 - 전자신문",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1pX0xsc09FTV9oSHRhdzFkZ19QaUhQcmxHcVRQVXc0cE9CQlI0X3JXbTRZOGpWNkk2N2cwVlhpNmFqTmRqMGxsWjgzLVE0dw?oc=5",
-      "description": "금융 망분리 규제 푼다…AI 보안체계 구축 속도  전자신문",
-      "pubDate": "2026-05-25 07:35:00"
+      "title": " ¾ØÆ®·ÎÇÈ ¡°¹é¾Ç°ü ¼öÃâ ÅëÁ¦, °ð ÇØ¼ÒµÉ °Í¡±... ÇÑ±¹ »ç¹«¼Ò ³»°í Á¶Á÷ È®´ë ",
+      "source": "보안뉴스",
+      "link": "http://www.boannews.com/media/view.asp?idx=144161&kind=&sub_kind=",
+      "description": "±Û·¡½ºÀ® ¹× º¸¾È Çù·Â °ü·ÃÇØ¼± ¡®Áú¹® ÀÚÁ¦¡¯ ¿ä±¸¡°AI 3°­ ¾ß½É ÇÑ±¹, °á ¸Â´Â ÀÚ¿¬½º·¯¿î ÆÄÆ®³Ê¡±[º¸¾"
     },
     {
-      "category": "IT/기술",
-      "title": "닛케이 6만5000 돌파·대만 증시도 사상 최고치…“美-이란 종전 ?” 매수 열풍 - 전자신문",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBhSU81NktqMHoxdTJNcFJsVUxVa21WM3RnUGVsX3pSWG50c092ME1qMmRWRmMyS1NnT291SDFMOWtwYW1WV3lIazFwcUQtQQ?oc=5",
-      "description": "닛케이 6만5000 돌파·대만 증시도 사상 최고치…“美-이란 종전 ?” 매수 열풍  전자신문",
-      "pubDate": "2026-05-25 08:36:22"
+      "category": "보안/사고",
+      "title": " Á¶´ÞÃ», Á¶´ÞÀÚÀ²È­ ½Ã¹ü»ç¾÷ °ü·Ã ¾÷°è °£´ãÈ¸ °³ÃÖ ",
+      "source": "보안뉴스",
+      "link": "http://www.boannews.com/media/view.asp?idx=144160&kind=&sub_kind=",
+      "description": "Á¶´ÞÀÚÀ²È­ ½Ã¹ü»ç¾÷ Âü¿© ¾÷Ã¼ ¹× ÇùÈ¸¿¡ ÀÚÀ²È­ °ü·Ã ¾Ö·Î¡¤°ÇÀÇ»çÇ× Ã»Ãë [º¸¾È´º½º ¾öÈ£½Ä ±âÀÚ] Á¶´ÞÃ"
     },
     {
-      "category": "IT/기술",
-      "title": "“비판은 감수, 허위는 대응”...엔씨 게임업계에 기준 제시 - 전자신문",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9mTGRyNlZRUFVzOXdpcFA1VUlacTgwRlJBSXA3STdPTXNzYi1rczI3RTEyZWtfaHpQOUdEX19oWVFsRnJJTVJDRi02MFpyQQ?oc=5",
-      "description": "“비판은 감수, 허위는 대응”...엔씨 게임업계에 기준 제시  전자신문",
-      "pubDate": "2026-05-25 00:00:00"
-    },
-    {
-      "category": "IT/기술",
-      "title": "[원에이AI 반도체 연구개발에 1000억대 뭉칫돈 - 전자신문",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE9meC0tN2FhZmhtZ1pCRzBIaTBodFdzaDRtQzJ5c2NwREVnbS1uWDZrTFhUM2lvZHJZUDRNLTZNcmpOZUxUU004aDhMTVItQQ?oc=5",
-      "description": "[원에이AI 반도체 연구개발에 1000억대 뭉칫돈  전자신문",
-      "pubDate": "2026-05-22 02:00:00"
-    },
-    {
-      "category": "IT/기술",
-      "title": "서울 시내 한 휴대폰 전문 매장. 박지호기자 jihopress@etnews.com - 전자신문",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMilgVBVV95cUxQazhUalpmdV9LcUY3N2pqUWJ2eDBCekkweEZXZFY3MEt1d1BwUFEybWF6Tk1Vb1pNeWI5TTlKdVhBeVJjdTNoUlNQQTlZbTZPc21wak5VZWk1RGpNZkVOM3hJZThzQVViS2s5Y184OVRJb1pVZkxOVnJYVmFxLWY5VmhLN1BkQi0zbk1rT3VyWWNEOVdjaENxX0YxbHQzdFduTzVrYm9IaXY0RkJsNkoxdVpDWTlGWG1PektzOFpsbEhEUUtDYmlIcEU2VFlmMTExajhjTUJvNDZuMjd2QTYzQUpGUWxEMXpTXzBraExQVVc5LTdhTjlBU1E4QmVpNElybkhMOERyQThhSXB1bm9RemliVUNYUDVNazdZQTRnWVFmdVY1cG16QzE2WVlPT2ZZbzhtQ3NNTEhRUjZuamhSdWNQUWJGRk96YW5xMVFIYTItTld5NkxYX0Q4OFhhM0JvNlhSb3VSY3hxbnpoMkh5eDQzSkZtZjdRbDZZbU03M0t0RUZwZDNpZndKZWcySEFfamJJclNzc09scjNSc0NDZXpVbzFlTTM3OFd5TmY3S2kyMjdUYVpCNW9tX3RIR25SemdIc2pGc3FKMTJQSmRaVW9oSWZ3YmZJbWhmSkk0S0tPOGtENWxLcm9lVk8tV2tCM3JmdWVxTmZVeDhBU2l0aGlNTTJpT1hKOFRaM0tIQW1xMDhOQnJnTmVIRUNqYTd4YjlpZnk4MzNrRnZVMnBWUjJIdEpjM1lwQzRkdTRPalZ3OHFOY3BRMWk2ZUh6RGJyRGR0RUZPSzljV2J2Rk1mOFlVbmdQRW5qVTNzNTZZT2JWMVo3VktIWmxJUlJ5aWFJbXhMZnR5TVJubjdCSkxGYmZzZ2JwUQ?oc=5",
-      "description": "서울 시내 한 휴대폰 전문 매장. 박지호기자 jihopress@etnews.com  전자신문",
-      "pubDate": "2026-05-22 15:15:59"
-    },
-    {
-      "category": "IT/기술",
-      "title": "삼성·샤오미도 가세…판 커지는 오픈형 이어폰 시장 - 전자신문",
-      "source": "전자신문",
-      "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1JYjFWRlNSaV8xdzBORllTNFVRZTNfSjFSb3ppckxycDlmVENFVmpKZUlCR0dDcHZQZUdQVkJobDEwMHFLcWJZbzc0WEo0UQ?oc=5",
-      "description": "삼성·샤오미도 가세…판 커지는 오픈형 이어폰 시장  전자신문",
-      "pubDate": "2026-05-21 01:37:11"
-    },
-    {
-      "category": "IT/기술",
-      "title": "BOE, 삼성D보다 5달러 낮은 가격에 갤S27 OLED 납품 제안 - 지디넷코리아",
-      "source": "ZDNet",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1KZVJieGVWekE2bmVmYnhWaXp6NTFoajlsLXJDMk1XcUVMQVFWS1RLbEROeHYxTlp3bHktZ1dYYjZuM0dERkhQZ1pGUWdyYUZJVjM5WHV3?oc=5",
-      "description": "BOE, 삼성D보다 5달러 낮은 가격에 갤S27 OLED 납품 제안  지디넷코리아",
-      "pubDate": "2026-05-22 01:22:36"
-    },
-    {
-      "category": "IT/기술",
-      "title": "정용진 신세계 회장이 '5·18 탱크데이 논란' 사과 서두른 이유 - 지디넷코리아",
-      "source": "ZDNet",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE82amgtM1RJckdBSTNrR3hkLV85RGQ5MGM4c1N1WUVpdjhTMEc1aVkzSXJoRW5Ca1NBSElZT2RXVUJKN1ljSWo3MG44SDlkakhHVk9vNE5n?oc=5",
-      "description": "정용진 신세계 회장이 '5·18 탱크데이 논란' 사과 서두른 이유  지디넷코리아",
-      "pubDate": "2026-05-19 06:24:51"
-    },
-    {
-      "category": "IT/기술",
-      "title": "스타트업 넘어 군·학계까지…민간 주도 '국방 AX 컨트롤타워' 출격 - 지디넷코리아",
-      "source": "ZDNet",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1oRlRveUUwRlU5Q1FyQ3NwZ2t4MzQxNmNmRHNzSmZsdjl5Snc2b3gtYlZ5SXFKLVQ2Z3YwLWQzRkd6bUV4eTdrU2JyY0dtazhVRDdSQlhB?oc=5",
-      "description": "스타트업 넘어 군·학계까지…민간 주도 '국방 AX 컨트롤타워' 출격  지디넷코리아",
-      "pubDate": "2026-05-25 02:33:45"
-    },
-    {
-      "category": "IT/기술",
-      "title": "리벨리온, 내년 사우디 아람코에 2세대 AI 추론칩 공급 - 지디넷코리아",
-      "source": "ZDNet",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1ROHVfSnMwdU1fSGMtbmJJbHhDNHJxUmNCbkY2aGFzNHBYMzVNM0pNMk4tT2prR3VYOUVjbnVfZ296R2NaXzdlY1JLZElieUYtR3I1ZTVn?oc=5",
-      "description": "리벨리온, 내년 사우디 아람코에 2세대 AI 추론칩 공급  지디넷코리아",
-      "pubDate": "2026-05-26 01:30:09"
-    },
-    {
-      "category": "IT/기술",
-      "title": "삼성·SK도 주목…차세대 AI 메모리 'MRDIMM' 표준 완성 임박 - 지디넷코리아",
-      "source": "ZDNet",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBJajItY1FtZS1JZmR2c3VVVGJkUzBsbzJqMnh2dUJkYlYyWGRuRC13RGNmNWlReXljYlJSM1VjSzUxRFl2d0U3WDA5aUJIYV8wZEJKWlV3?oc=5",
-      "description": "삼성·SK도 주목…차세대 AI 메모리 'MRDIMM' 표준 완성 임박  지디넷코리아",
-      "pubDate": "2026-05-05 07:00:00"
-    },
-    {
-      "category": "IT/기술",
-      "title": "정용진 신세계 \"스타벅스 탱크데이 논란 모두 내 책임\" - 지디넷코리아",
-      "source": "ZDNet",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1QVzVOOGVjR2FRRDVZR29NZFM5d3pqRkpZZWxYWWs1dnY3RFBMSlR6UmtTR004MmdRQlh5NjRzaEd0U0NPS3R2OUdDTk9UVk9qa1NReDJn?oc=5",
-      "description": "정용진 신세계 \"스타벅스 탱크데이 논란 모두 내 책임\"  지디넷코리아",
-      "pubDate": "2026-05-26 00:17:13"
-    },
-    {
-      "category": "IT/기술",
-      "title": "삼성전자, '파업 리스크' 해소…찬반투표 가결만 남았다 - 지디넷코리아",
-      "source": "ZDNet",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBpQW91ZzdmVVBUNjA4NTk2YlBGbEVDNGhfeDZrWEh6eG5LVG9IQ1JyZXZZeFpnS1BXc3hVa1pxajFhSGN2a1huYzd3QVdKclRBUTZVTE53?oc=5",
-      "description": "삼성전자, '파업 리스크' 해소…찬반투표 가결만 남았다  지디넷코리아",
-      "pubDate": "2026-05-20 16:12:26"
-    },
-    {
-      "category": "IT/기술",
-      "title": "삼성디스플레이, 페라리 전기 스포츠카에 OLED 4종 단독 공급 - 지디넷코리아",
-      "source": "ZDNet",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE11RnRpamR3bTJoNGFhbEZIdGd3dzNIZUV0RVg4MV9sQWNWaTNfTUd5V2NMZEhPMlJ5RDlnMUVKU0FXN0k1TlI4bWFwOHBVS0FoMFRwUHdn?oc=5",
-      "description": "삼성디스플레이, 페라리 전기 스포츠카에 OLED 4종 단독 공급  지디넷코리아",
-      "pubDate": "2026-05-25 23:17:00"
-    },
-    {
-      "category": "IT/기술",
-      "title": "CATL, 왜 딥시크에 베팅하나…AI 데이터센터 전력 수요 겨냥 - 지디넷코리아",
-      "source": "ZDNet",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1DRDJNeEU4bjNpNmJGYk5sRHkyd1g3SDY5cUxWY1lOb0Z0M0hSRVdUak11ZGl5LTJKVEx0NUJZNTFFLWxmMXlfcW5MWGRrbUp5X0ZfUFlR?oc=5",
-      "description": "CATL, 왜 딥시크에 베팅하나…AI 데이터센터 전력 수요 겨냥  지디넷코리아",
-      "pubDate": "2026-05-24 01:32:45"
-    },
-    {
-      "category": "IT/기술",
-      "title": "'메모리 월' 부순다…GPU·HBM '광연결' 패키징 부상 - 지디넷코리아",
-      "source": "ZDNet",
-      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9Hdm9PUWJjV1RJUzBuUUI3S3JmYW1mOXU3bkpKQUJRamNvZjlxbXpWd1NmOUhZbmhRTTBraHI2TU1OWnNMVG5RZmNpczFVN1ZMQ19CRV9R?oc=5",
-      "description": "'메모리 월' 부순다…GPU·HBM '광연결' 패키징 부상  지디넷코리아",
-      "pubDate": "2026-05-22 03:27:42"
+      "category": "보안/사고",
+      "title": " ÇÑ±¹ÈÄÁöÇÊ¸§BI, ÇÑ±¹¸¶ÀÌÅ©·Î¼ÒÇÁÆ®¡¤¿¡¾²ÇÉÅ×Å©³î·ÎÁö¿Í ¡®AIÆ®·»µå¡¤È°¿ë »ç·Ê ¼¼¹Ì³ª¡¯ ¼º·á ",
+      "source": "보안뉴스",
+      "link": "http://www.boannews.com/media/view.asp?idx=144159&kind=&sub_kind=",
+      "description": "2026 AI ½ÃÀå µ¿ÇâºÎÅÍ º¸¾È¡¤¾÷Á¾º° ±¸Ãà »ç·Ê±îÁö, ±â¾÷ AI µµÀÔ ÇÙ½É °úÁ¦¿¡ ¸íÄèÇÑ ÇØ´ä Á¦½Ã»ç³» ¹®¼­"
     },
     {
       "category": "병원/의료",
       "title": "보건의료문화를 선도하는 데일리메디 - 데일리메디",
       "source": "데일리메드",
       "link": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBxV2hESmlBdl9SYXFTU1JEcHh1NVE1TFhlYmlDc0dyOGNVOWhqZWdQQlVlY2E4enYxRFgxeTdaUQ?oc=5",
-      "description": "보건의료문화를 선도하는 데일리메디  데일리메디",
-      "pubDate": "2008-05-27 22:30:47"
+      "description": "보건의료문화를 선도하는 데일리메디&nbsp;&nbsp;데일리메디"
     },
     {
       "category": "병원/의료",
-      "title": "의협 “내과·소청과 수익 후퇴, 1차의료 고사” - 데일리메디",
+      "title": "경찰, 세브란스병원 압수수색…수사 결과 촉각 - 데일리메디",
       "source": "데일리메드",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0ybmF2LXliVHFYX0ZYNTRJVmNRMm1PaUZvbHFuU25HRnk5eEVha2RlNi11b1ZraDdHbVMwV1V6V0ZYQ21wX0kyZl9ueUlEZHlhQ2RHejJJMjd1RzRrcVhvTjFIQUxEbjFu?oc=5",
-      "description": "의협 “내과·소청과 수익 후퇴, 1차의료 고사”  데일리메디",
-      "pubDate": "2026-05-20 10:33:00"
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBZc2JYdEJHZndLVzJkaHZGbkF4Q01TbnBMdG96WnZBZ1V3VzdwMEJXYkdCN3A2a1JXYjlaa3JXTnJoT0Y3TnZYVm1FSVloMkI1cXQxcnhJeUdqM3V6b0FfT2RYd1QzWWVJ?oc=5",
+      "description": "경찰, 세브란스병원 압수수색…수사 결과 촉각&nbsp;&nbsp;데일리메디"
     },
     {
       "category": "병원/의료",
-      "title": "﻿고대안암병원, 1200억 투입…중증의료 고도화 - 데일리메디",
+      "title": "전담간호사(PA) 교육기준 마련…‘수행 기관’ 공모 - 데일리메디",
       "source": "데일리메드",
-      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1KQzFCMkxEVHRSdDBrNVJZU1Ywa0pNS0tVbFh0YXZVSnZRbjhBNmJodExTZktieE1ydWRUcnNNbFFDQ1hpVzJLQzluT1dIOUQ5ejhLTnYwQmZWbDBVc0VsOEZvQU5YMDdB?oc=5",
-      "description": "고대안암병원, 1200억 투입…중증의료 고도화  데일리메디",
-      "pubDate": "2026-05-19 20:45:00"
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFBic2tfVHRxWkxUY3kzdGhkZFN0OFBLLUFmLVZxaThGRXdOMlpxOWlDZmw4RHZ0ckt6RElKbUE0THR3bHFpREdvVHhjWHFxcXhHNzUwUGhTdEtZVG9SZFJsTmlTWWNTM3d0?oc=5",
+      "description": "전담간호사(PA) 교육기준 마련…‘수행 기관’ 공모&nbsp;&nbsp;데일리메디"
     },
     {
       "category": "병원/의료",
-      "title": "데일리메디 - 데일리메디",
-      "source": "데일리메드",
-      "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1qNkp4NjNHeC1wYnlBdUR4N21XOFNMSUxFUGRaejNqTHgxemhod1lGN2U4Y3g3WmVVVGtwUGxFTnpmbHU3RWpBUV9NY0ItM2l3UVVYbG5tTGV1OVcxaEJDTWFMbHMwejVGQWlWWFBic0Y2ZE0tbDZj?oc=5",
-      "description": "데일리메디  데일리메디",
-      "pubDate": "2026-05-16 02:08:20"
+      "title": "의협신문 - 의협신문",
+      "source": "의협신문",
+      "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE40enZla0NNZXVaR3FtckxsZm15U3U3dzFzWFYycklZWkZ1ZTIycElBZEpqc1NjQTdFUHA5R1pScm90b0pI?oc=5",
+      "description": "의협신문&nbsp;&nbsp;의협신문"
     },
     {
       "category": "병원/의료",
-      "title": "큐렉소, 인도 의료로봇 시장 공략 가속도 - 데일리메디",
-      "source": "데일리메드",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBzTjAtWXdHMUgxMEhEaXpOVGRQSnkwX284a0RGVjk4b0gwRFVfQ29LVHh2Mmx5Vm1BWHhQWkxqWm15dEtpbW82ODQwSWJfdnpCa2pHaUdHX0lJZ1FGWFA0MlRZdw?oc=5",
-      "description": "큐렉소, 인도 의료로봇 시장 공략 가속도  데일리메디",
-      "pubDate": "2026-05-19 13:06:39"
+      "title": "전공의·교수·봉직의 \"이제는 의사노조 시대…연대하자\" - 의협신문",
+      "source": "의협신문",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE9LNFlzSlZkVjhocURkc0lDZVNRUF83WmJMd2Z1RFBXSUd6dGtwa3Zxa2cwc1NaVFRHdGI5ZDhGeWZYNjFzWnQyWHJWQTRrUy1SVlUwclhWcWFGNzYwRnZ0Q3R3UWhuaUg5dkxST1E3ZjJTdw?oc=5",
+      "description": "전공의·교수·봉직의 \"이제는 의사노조 시대…연대하자\"&nbsp;&nbsp;의협신문"
     },
     {
       "category": "병원/의료",
-      "title": "도수치료 수가 4만원…醫 “정부 일방적 행정 규탄” - 데일리메디",
-      "source": "데일리메드",
-      "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1qMkdVRFgzS3FTR0V1UE01SWNtUUVIVHg1aFlKZldLcWpWXzNYeTk4cnlMRm5wN2x4clZSWTFtZVNPSVB2RThHVFI0ZUtXWk1TS1NyblN1NDZKdEVTMkp4UHVKbmRzR3g2TmRxRA?oc=5",
-      "description": "도수치료 수가 4만원…醫 “정부 일방적 행정 규탄”  데일리메디",
-      "pubDate": "2026-04-21 07:00:00"
+      "title": "투쟁나섰던 김택우 의협회장, 면허정지 처분 '위법' 최종 확정 - 의협신문",
+      "source": "의협신문",
+      "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE11SXpvY0U1dTV3WGczNDBNMkFDNEItVlVNQUtwa2doX01YZXZ1NWI1Zl8tdTdUbXRjT1BrdDE0OFhxQ0czUXNzWmVmQlpyVzZjcFhJc0ZReEU1M3plN2o3dFlZMjlHZ1Z6Q2pwTmJsQmRTdw?oc=5",
+      "description": "투쟁나섰던 김택우 의협회장, 면허정지 처분 '위법' 최종 확정&nbsp;&nbsp;의협신문"
     },
     {
-      "category": "병원/의료",
-      "title": "공공산후조리원 ‘국비 지원 근거’ 마련 추진 - 데일리메디",
-      "source": "데일리메드",
-      "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFB1eFJNdjJLWGE1Y0dwRzcxRm5GVmQ3bFJVeG1KbTFON2lVTkt5X0xVS1BGeThVX0FkU0dqTU9Bb0RWc2hBUVBTM2ZieHhKc2FIdF93Y1FhYlpqdjlXZWlXTnJaTQ?oc=5",
-      "description": "공공산후조리원 ‘국비 지원 근거’ 마련 추진  데일리메디",
-      "pubDate": "2026-05-19 22:12:59"
+      "category": "사회",
+      "title": "공포 체험하던 대학생 4명, 충주 폐리조트 옥상서 시신 발견 - 연합뉴스",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5PU0RSbS1Sdmt1eHVOY245eUtkcTZZR3lYYzJqNU5FV19SRnVZbWVOZmNLU01QZ0hJMHNQalZMbE5QQWpDVkhnUkVKeDZaWjQ3NS1BSWhTNHhrUTDSAWBBVV95cUxOZ09FcUI3WU1oYVV3SXhtQmFVVGY3YmFRS2d0Nk1aSklRYXhjTjBNWUhmdjVBRE1peHVBS2w2Sm42UXNvS0JiUjhWbnpIMWNOdFphZXlSTHRQYzZObjcxcC0?oc=5",
+      "description": "공포 체험하던 대학생 4명, 충주 폐리조트 옥상서 시신 발견&nbsp;&nbsp;연합뉴스"
     },
     {
-      "category": "보안/사고",
-      "title": "117개 잠복 기법 잡아낸다... 헥사스트라이크, 차세대 포렌식 툴 ‘파시스턴스 스나이퍼’ 공개",
-      "source": "보안뉴스",
-      "link": "http://www.boannews.com/media/view.asp?idx=143800&kind=&sub_kind=",
-      "description": "윈도우·리눅스·맥 대상117개 지속성 악성 기법 식별 지원포렌식 이미지·KAPE 덤프 분석 기반... DLL 프록싱·LOLBin 등 탐지 강화YAML 기반 규칙 설정·MITRE ATT&amp;CK 연동 통해 IR 대응 효율성 높여[보안뉴스 김형근 기자] 보안 기업 헥사스트라이크(Hexa",
-      "pubDate": "2026-05-26 02:43:00"
+      "category": "사회",
+      "title": "최저임금위 '업종별 차등 적용' 논의 시작…노사 본격 줄다리기 - 연합뉴스",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5rUWtLeV96N1o3cGR3N2ZDb0k3REtXOFkyMnlvLWtaZHNjUFZGa2g1eGtpQVJLd0I5bDhKR2laNkxRN3JaRERoWldqaHFZRERqaXJRUHFxNWlpRVnSAWBBVV95cUxQSjJZR19OaGhZWllOZFJyOGtxYnVCNTJRNTNnYS1EU2U3aTlNNmFOMERReS1JaS1RY19vZHZSdURNbW9Tb1JuMVF5NUtwT1dfWFhhMkFwTmRqbG9XYnc2SHQ?oc=5",
+      "description": "최저임금위 '업종별 차등 적용' 논의 시작…노사 본격 줄다리기&nbsp;&nbsp;연합뉴스"
     },
     {
-      "category": "보안/사고",
-      "title": "누리랩, 대량문자 전송자격인증제 선제 대응 나선다...AskURL 지원 확대",
-      "source": "보안뉴스",
-      "link": "http://www.boannews.com/media/view.asp?idx=143795&kind=&sub_kind=",
-      "description": "문자재판매사 및 중계사 대상 피싱·불법 광고 사전 차단 체계 제공API 및 구축형 연동 지원 통해 발송 업체의 컴플라이언스·증빙 관리 지원[보안뉴스 조재호 기자] 대량문자 전송자격인증제 시행으로 문자 발송 사업자의 보안 책임이 강화되는 가운데, 누리랩이 악성 URL 탐지 솔루션 애스크U",
-      "pubDate": "2026-05-26 02:34:00"
-    },
-    {
-      "category": "보안/사고",
-      "title": "그룹아이비(Group-IB), ‘AWS 금융 서비스 컴피턴시’ 획득",
-      "source": "보안뉴스",
-      "link": "http://www.boannews.com/media/view.asp?idx=143803&kind=&sub_kind=",
-      "description": "AWS 검증한 금융 사이버보안 전문사 인정...은행·보험·결제사 대상 예측형 방어 체계 제공 [보안뉴스 원병철 기자] 디지털 범죄를 조사, 예방 및 대응하기 위한 사이버보안 기술 분야의 글로벌 선도적 기업인 그룹아이비(Group-IB, 지사장 김기태)는 ‘AWS 금융 서비스 컴피턴시’(",
-      "pubDate": "2026-05-26 02:29:00"
-    },
-    {
-      "category": "보안/사고",
-      "title": "여의시스템, Moxa 산업용 네트워크 기술 교육 프로그램 공식 운영",
-      "source": "보안뉴스",
-      "link": "http://www.boannews.com/media/view.asp?idx=143793&kind=&sub_kind=",
-      "description": "산업용 네트워크 엔지니어 위한 Moxa 공식 인증 자격 교육 프로그램[보안뉴스 강초희 기자] 여의시스템(공동대표 성명기·성제현)이 글로벌 산업용 통신 분야 리더 Moxa의 공식 인증 기술 교육 프로그램 ‘MXCx’(Moxa Certification and Training Service)",
-      "pubDate": "2026-05-26 02:27:00"
-    },
-    {
-      "category": "보안/사고",
-      "title": "넷앤드, ‘2026 파트너 데이’ 성료... 파트너와 동반성장·EGS 실천",
-      "source": "보안뉴스",
-      "link": "http://www.boannews.com/media/view.asp?idx=143801&kind=&sub_kind=",
-      "description": "단순한 비즈니스 교류 넘어 파트너사와 함께 나눔 활동 실천하는 ESG 행사로 자리매김2026 파트너 정책, 자사 대표 솔루션 ‘HIWARE’의 고도화된 신규 기능 및 파트너 영업 전략 공유[보안뉴스 원병철 기자] 통합 접근제어 및 계정관리(IAM) 솔루션 전문기업 넷앤드(대표 신호철)가",
-      "pubDate": "2026-05-26 02:07:00"
-    },
-    {
-      "category": "보안/사고",
-      "title": "“무엇이 어디에 있는지 알아야 보안도 시작”... 다온기술, RiskMap 1.6 출시",
-      "source": "보안뉴스",
-      "link": "http://www.boannews.com/media/view.asp?idx=143797&kind=&sub_kind=",
-      "description": "N2SF·망 분리 전환 시대에 맞춰 백업·복구, 자산 수집 중계 서버, macOS 에이전트 지원[보안뉴스 원병철 기자] 다온기술은 사이버 자산 관리 플랫폼 ‘RiskMap 1.6 버전’을 출시했다고 밝혔다. 이번 업데이트는 단순한 기능 추가가 아니라, 실제 보안 운영 환경에서 반복적으로",
-      "pubDate": "2026-05-26 01:51:00"
-    },
-    {
-      "category": "보안/사고",
-      "title": "“단일 인증 넘어 통합 플랫폼으로” 라온시큐어, 디지털 신뢰 인프라 구축",
-      "source": "보안뉴스",
-      "link": "http://www.boannews.com/media/view.asp?idx=143794&kind=&sub_kind=",
-      "description": "블록체인 DID 기술 결합해 신원 확인과 자격 검증 아우르는 전략 추진김창수 본부장 “금융 및 공공 분야 인증 수요 변화에 선제적 대응할 것”[보안뉴스 조재호 기자] 라온시큐어가 공공 마이데이터 기반 비대면 서비스 확산에 맞춰 자사 통합인증 서비스 ‘옴니원 CX’를 앞세워 금융권 디지털",
-      "pubDate": "2026-05-26 01:13:00"
-    },
-    {
-      "category": "보안/사고",
-      "title": "“기술유출의 핵심은 사람” 산업기술보호협회, 맞춤형 보안교육 확대",
-      "source": "보안뉴스",
-      "link": "http://www.boannews.com/media/view.asp?idx=143792&kind=&sub_kind=",
-      "description": "지난해 기술유출 범죄 82.7%가 내부자 소행... 인적 관리 취약성 대두국가핵심기술 집중교육 및 CSO 양성교육 등 실무 중심 프로그램 운영[보안뉴스 조재호 기자] 고도화되는 산업기술 유출 사고를 막기 위해 시스템 구축을 넘어 기업 내부 인력을 대상으로 한 맞춤형 보안 교육의 중요성이",
-      "pubDate": "2026-05-26 01:10:00"
-    },
-    {
-      "category": "보안/사고",
-      "title": "민관 집단지성으로 해킹 막는다... 美 CISA 실전형 제보 플랫폼 가동",
-      "source": "보안뉴스",
-      "link": "http://www.boannews.com/media/view.asp?idx=143790&kind=&sub_kind=",
-      "description": "외부 연구원과 기업 파트너가 직접 제보할 수 있는 새로운 보안 경로 신설AI 동원해 무차별 취약점 찾아내는 해커 공격 속도에 대응한 조치[보안뉴스 김형근 기자] 미국 연방 사이버보안 및 인프라보안국(CISA)이 정부 외부의 민간 보안 연구원과 기업 파트너들이 해킹 취약점을 직접 제보할 ",
-      "pubDate": "2026-05-26 00:47:00"
-    },
-    {
-      "category": "보안/사고",
-      "title": "시놀로지, 액티브-액티브 NVMe 엔터프라이즈 스토리지 솔루션 출시",
-      "source": "보안뉴스",
-      "link": "http://www.boannews.com/media/view.asp?idx=143791&kind=&sub_kind=",
-      "description": "듀얼 컨트롤러 아키텍처 기반의 4U 섀시에 48개의 NVMe SSD 베이 탑재최대 7개의 확장 유닛 추가로 최대 1.65PB의 원시 용량 및 2048GB 메모리 확장[보안뉴스 엄호식 기자] 시놀로지(Synology)가 자사 최초의 액티브-액티브 올플래시 NVMe 엔터프라이즈 스토리지 솔",
-      "pubDate": "2026-05-26 00:31:00"
+      "category": "사회",
+      "title": "익산 웅포블루베리축제 20∼21일 개최…직거래 판매·수확 체험 - 연합뉴스",
+      "source": "연합뉴스",
+      "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBnaTc3UGpSUmVEZFlEaU1NRG1HV0JKdnBGQ3NDVjF4b0kwSnhsUEQ2Vkw3SzRZVlZOclFZZDZaMFg0aTdZaW81QlhseFF5cEdjUzJlNnpQTk5EWXfSAWBBVV95cUxQOGJrLVhsT0tGa3NzWDgya1QtZWd2a05xVTRDZWZqT29fdmhXQ1J6SDh1Vms4SE9LVnhiNFF6YmFMTXUwN0pwcF9pVDFUM2NRSE9JYURTZDl0WjBEQ0w1OUY?oc=5",
+      "description": "익산 웅포블루베리축제 20∼21일 개최…직거래 판매·수확 체험&nbsp;&nbsp;연합뉴스"
     }
   ],
-  "sources": [
-    {
-      "name": "전자신문 (IT)",
-      "url": "https://news.google.com/rss/search?q=site:etnews.com&hl=ko&gl=KR&ceid=KR:ko"
-    },
-    {
-      "name": "ZDNet (기술)",
-      "url": "https://news.google.com/rss/search?q=site:zdnet.co.kr&hl=ko&gl=KR&ceid=KR:ko"
-    },
-    {
-      "name": "보안뉴스 (전문)",
-      "url": "https://www.boannews.com/media/news_rss.xml"
-    },
-    {
-      "name": "데일리메드 (병원)",
-      "url": "https://news.google.com/rss/search?q=site:dailymedi.com&hl=ko&gl=KR&ceid=KR:ko"
-    },
-    {
-      "name": "의협신문 (의료)",
-      "url": "https://news.google.com/rss/search?q=site:doctorsnews.co.kr&hl=ko&gl=KR&ceid=KR:ko"
-    },
-    {
-      "name": "연합뉴스 (종합)",
-      "url": "https://news.google.com/rss/search?q=site:yna.co.kr&hl=ko&gl=KR&ceid=KR:ko"
-    }
-  ],
-  "lastUpdated": "2026-05-26 14:40:46"
+  "lastUpdated": "2026-06-18 09:29:36"
 }

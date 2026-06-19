@@ -1,24 +1,20 @@
 {
   "main": {
-    "id": "12b6816cf09bf474",
+    "id": "8db141b4767bfd05",
     "type": "split",
     "children": [
       {
-        "id": "00dc543ac952f588",
+        "id": "79ef02f7644e8269",
         "type": "tabs",
         "children": [
           {
-            "id": "43de67ef9051540c",
+            "id": "dd684c4e7b99fef2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Obsidian"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "그래프 뷰"
             }
           }
         ]
@@ -27,15 +23,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "d048d286ebe64f7f",
+    "id": "6e9733283de4753e",
     "type": "split",
     "children": [
       {
-        "id": "eab0a010a224220d",
+        "id": "81c8b79e89eb7424",
         "type": "tabs",
         "children": [
           {
-            "id": "19ad7d3689963300",
+            "id": "163f8bd29b2873b4",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -48,7 +44,7 @@
             }
           },
           {
-            "id": "3d88580a80b9068c",
+            "id": "f3753d1f607d2244",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,7 +61,7 @@
             }
           },
           {
-            "id": "5c3e7efe339055dd",
+            "id": "eca985d56983074a",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -78,23 +74,22 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "b0d1ac1b30ed817b",
+    "id": "9a21498340b3982d",
     "type": "split",
     "children": [
       {
-        "id": "402000d486a11836",
+        "id": "d4985ffae38f44af",
         "type": "tabs",
         "children": [
           {
-            "id": "2d1c9f84184ded2b",
+            "id": "51e38ddf6a6665bd",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,25 +99,24 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Obsidian 의 백링크"
+              "title": "백링크"
             }
           },
           {
-            "id": "ff6a3c695cec32a0",
+            "id": "17f6ee3da4c132fb",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "환영합니다!.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "환영합니다! 의 나가는 링크"
+              "title": "나가는 링크"
             }
           },
           {
-            "id": "ee8003c7aa601583",
+            "id": "a4c8db07dc47b38f",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -137,7 +131,7 @@
             }
           },
           {
-            "id": "c2d1d55ae68b0059",
+            "id": "fda309e6dbd16208",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -151,25 +145,25 @@
             }
           },
           {
-            "id": "b81257d7eabc8e47",
+            "id": "9f24547b4285eefb",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "환영합니다!.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "환영합니다! 의 개요"
+              "title": "개요"
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -182,32 +176,33 @@
       "bases:새 베이스 생성하기": false
     }
   },
-  "active": "43de67ef9051540c",
+  "active": "dd684c4e7b99fef2",
   "lastOpenFiles": [
-    "무제.base",
-    "Obsidian.md",
-    "Retrieval_Augmented_Generation_(RAG).md",
-    "Andrej Karpathy.md",
-    "Andrej_Karpathy.md",
-    "LLM_Wiki.md",
-    "LLM Wiki.md",
-    "무제.canvas",
-    "README.md",
-    "Retrieval_Augmented_Generation_(RAG) 1.md",
-    "log.md",
-    "index.md",
-    "Andrej_Karpathy 1.md",
-    "Obsidian 1.md",
-    "log 1.md",
-    "LLM_Wiki 1.md",
-    "index 1.md",
-    "README 4.md",
-    "무제.md",
-    "README 3.md",
-    "README 2.md",
-    "README 1.md",
-    "무제/무제",
-    "무제",
-    "환영합니다!.md"
+    "llm_wiki/reports/20260619_154724_안드레_카파시_llm_wiki_개념_이해.md",
+    "llm_wiki/Andrej Karpathy.md",
+    "llm_wiki/텔레그램 (Telegram).md",
+    "llm_wiki/LLM Wiki.md",
+    "llm_wiki/skills/__pycache__/skill_write_report.cpython-311.pyc",
+    "llm_wiki/skills/__pycache__/skill_plan_report.cpython-311.pyc",
+    "llm_wiki/skills/skill_write_report.py",
+    "llm_wiki/skills/skill_plan_report.py",
+    "llm_wiki/agents/report_writer_agent.md",
+    "llm_wiki/agents/report_planner_agent.md",
+    "llm_wiki/raw/archive/20260619_150038_telegram.txt",
+    "llm_wiki/wiki/Telegram.md",
+    "llm_wiki/raw/20260619_150038_telegram.txt",
+    "llm_wiki/raw/20260619_150034_telegram.txt",
+    "llm_wiki/raw/20260619_150030_telegram.txt",
+    "llm_wiki/raw/20260619_150026_telegram.txt",
+    "llm_wiki/raw/20260619_150022_telegram.txt",
+    "llm_wiki/agents/compile_agent.md",
+    "llm_wiki/agents/ingest_agent.md",
+    "AGENTS.md",
+    "workspace/Retrieval_Augmented_Generation_(RAG).md",
+    "workspace/Obsidian.md",
+    "workspace/log.md",
+    "workspace/LLM_Wiki.md",
+    "workspace/index.md",
+    "workspace/Andrej_Karpathy.md"
   ]
 }

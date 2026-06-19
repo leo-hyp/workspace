@@ -3,6 +3,7 @@ import sys
 import json
 from datetime import datetime
 import io
+import time
 
 sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding='utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding='utf-8')
@@ -16,6 +17,29 @@ import skill_publish_telegram
 def send_alert(message):
     print(f"🚨 오케스트레이터 알림: {message}")
     skill_publish_telegram.send_telegram(f"🚨 [Medi-IT 파이프라인 경고]\n{message}")
+
+def wait_until_target_time(target_hour=7, target_minute=0):
+    now = datetime.now()
+    target_today = now.replace(hour=target_hour, minute=target_minute, second=0, microsecond=0)
+    
+    if now < target_today:
+        sleep_seconds = (target_today - now).total_seconds()
+        print(f"⏰ [Scheduler] 현재 시간 {now.strftime('%H:%M:%S')}. 목표 발송 시간 {target_today.strftime('%H:%M:%S')}까지 {sleep_seconds:.1f}초 동안 대기합니다...")
+        
+        while True:
+            current_time = datetime.now()
+            if current_time >= target_today:
+                break
+            remaining = (target_today - current_time).total_seconds()
+            sleep_chunk = min(30.0, remaining)
+            if sleep_chunk <= 0:
+                break
+            # 30초마다 로그를 찍어서 프로세스가 살아있음을 알림
+            print(f"⏰ [Scheduler] 대기 중... 남은 시간: {int(remaining)}초")
+            time.sleep(sleep_chunk)
+        print(f"⏰ [Scheduler] 목표 시간 {target_today.strftime('%H:%M:%S')}에 도달하였습니다. 발행 작업을 진행합니다.")
+    else:
+        print(f"⏰ [Scheduler] 현재 시간 {now.strftime('%H:%M:%S')}이 목표 시간 {target_today.strftime('%H:%M:%S')} 이후이므로 대기 없이 즉시 발행합니다.")
 
 def run_orchestrator():
     print("🚀 [Orchestrator] Medi-IT 브리핑 하네스 시작")
@@ -54,6 +78,9 @@ def run_orchestrator():
     
     with open(os.path.join(workspace_dir, f"{today_str}_briefing.md"), "w", encoding="utf-8") as f:
         f.write(briefing_html)
+
+    # ⏰ 7:00 AM 정시 발행을 위해 대기
+    wait_until_target_time(7, 0)
 
     # 옵시디언 데이터베이스 동기화
     obsidian_dir = r"C:\Users\ismadmin\Documents\ObsidianVault\Medi-IT-Research"

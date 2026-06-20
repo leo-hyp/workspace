@@ -62,6 +62,7 @@ def get_ai_insight(news_list):
         # [우선순위 1] 온프레미스 환경 (Gemma 4)을 최대한 활용하여 토큰 비용 절감
         # 로컬 서버 부하를 고려해 타임아웃을 60초로 넉넉하게 부여
         response = requests.post(local_url, json=local_payload, timeout=60, verify=False)
+        response.raise_for_status()
         result = response.json()
         if 'choices' in result and len(result['choices']) > 0:
             raw_text = result['choices'][0]['message']['content']
@@ -72,14 +73,16 @@ def get_ai_insight(news_list):
         print(f"⚠️ [Reviewer] 로컬 Gemma 모델 응답 실패, Gemini 3.5 Flash 엔진으로 폴백합니다. ({e})")
         # [우선순위 2] 상용 클라우드 환경 (Gemini 3.5 Flash)으로 안전하게 대체 (Fallback)
         try:
-            response = requests.post(gemini_url, json=gemini_payload, timeout=20, verify=False)
+            response = requests.post(gemini_url, json=gemini_payload, timeout=60, verify=False)
+            response.raise_for_status()
             result = response.json()
             if 'candidates' in result:
                 raw_text = result['candidates'][0]['content']['parts'][0]['text']
                 return format_ai_response(raw_text)
             else:
                 raise KeyError("candidates")
-        except Exception:
+        except Exception as e2:
+            print(f"❌ [Reviewer] 클라우드 Gemini 모델 응답 실패: {e2}")
             fallback_text = (
                 "🏷️ [한줄 핵심]: 실시간 뉴스 동기화 및 2.0 업그레이드 완료\n\n"
                 "📖 [심층 분석]: AI 분석 엔진 오류로 인해 임시 템플릿으로 대체되었습니다.\n\n"

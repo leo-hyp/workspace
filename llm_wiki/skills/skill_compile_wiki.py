@@ -4,7 +4,9 @@ import requests
 import shutil
 import base64
 import mimetypes
+import uuid
 from datetime import datetime
+from skills import skill_vector_db
 
 WORKSPACE = r"c:\Users\ismadmin\Documents\Workspace\llm_wiki"
 RAW_DIR = os.path.join(WORKSPACE, "raw")
@@ -168,6 +170,16 @@ def compile_all():
                     with open(target_path, 'w', encoding='utf-8') as f:
                         f.write(content)
                     print(f"  [{action.upper()}] {safe_name}")
+                    
+                    # Vector DB에 청크 인덱싱 (데이터 프로비넌스)
+                    # content 내용을 바로 넣지 않고, 의미있는 문단 단위로 잘라도 좋지만, 
+                    # LLM이 요약해준 단위 자체가 하나의 지식이므로 통째로 청크화합니다.
+                    chunk_id = f"{filename}_{uuid.uuid4().hex[:8]}"
+                    skill_vector_db.add_documents(
+                        texts=[content],
+                        metadatas=[{"source": filename, "target_md": safe_name}],
+                        ids=[chunk_id]
+                    )
                 
                 shutil.move(filepath, os.path.join(ARCHIVE_DIR, filename))
                 compiled_count += 1

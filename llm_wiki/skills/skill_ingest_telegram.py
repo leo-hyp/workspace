@@ -74,6 +74,14 @@ def poll_telegram_updates(offset=None):
                         print(f"[IngestAgent] Received ask command: {text}")
                         question = text.replace("#질문", "").replace("#ask", "").replace("#ASK", "").strip()
                         pending_commands.append({"chat_id": chat_id, "type": "ask", "question": question})
+                    elif "#삭제" in text:
+                        print(f"[IngestAgent] Received delete command: {text}")
+                        filename = text.replace("#삭제", "").strip()
+                        pending_commands.append({"chat_id": chat_id, "type": "delete", "filename": filename})
+                    elif "#검색" in text or "#search" in text.lower():
+                        print(f"[IngestAgent] Received search command: {text}")
+                        question = text.replace("#검색", "").replace("#search", "").replace("#SEARCH", "").strip()
+                        pending_commands.append({"chat_id": chat_id, "type": "search", "question": question})
                     # Require a specific hashtag to differentiate from general inquiries/newsletters
                     elif "#위키" in text or "#wiki" in text.lower():
                         print(f"[IngestAgent] Received wiki msg: {text[:30]}...")

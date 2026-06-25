@@ -25,10 +25,25 @@ def main():
             if not question.strip():
                 continue
                 
+            from skills.skill_web_search import web_search
+
             print("🔍 위키 지식망에서 답변을 찾는 중...")
             answer = ask_wiki(question)
             
+            needs_search = False
+            if "[NEED_WEB_SEARCH]" in answer:
+                answer = answer.replace("[NEED_WEB_SEARCH]", "").strip()
+                needs_search = True
+                
             print(f"\n[답변]\n{answer}\n")
+            
+            if needs_search:
+                user_choice = input("💡 위키에 정보가 부족합니다. 최신 구글 웹 검색을 통해 상세 정보를 가져올까요? [Y/N] > ")
+                if user_choice.strip().upper() in ['Y', 'YES', '네', '응']:
+                    print("\n🌐 스카우트 에이전트가 실시간 웹 검색 중...")
+                    web_answer = web_search(question)
+                    print(f"\n[웹 검색 결과]\n{web_answer}\n")
+                    
             print("-" * 50)
             
         except KeyboardInterrupt:
